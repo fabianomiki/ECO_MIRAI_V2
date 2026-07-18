@@ -1,0 +1,8 @@
+# Configuração local do ambiente de desenvolvimento.
+# Contém caminhos absolutos desta máquina — não faz sentido versionar.
+.claude/launch.json
+
+# Arquivos gerados pelo sistema operacional
+Thumbs.db
+Desktop.ini
+.DS_Store

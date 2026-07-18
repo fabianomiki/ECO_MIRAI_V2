@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECO MIRAI TECHNOLOGY — Tecnologia e Soluções para Petróleo e Gás</title>
+<meta name="description" content="ECO MIRAI TECHNOLOGY LTDA — Tecnologia, inovação e excelência para a indústria de petróleo e gás no Brasil e América Latina. Associada à KERUI GROUP.">
+<!-- O site não carrega nenhum recurso externo: fontes são do sistema e todas as
+     imagens são locais. A CSP abaixo trava isso e neutraliza injeção de scripts.
+     Em produção, envie também o cabeçalho X-Frame-Options / frame-ancestors
+     (não funciona via <meta>) — veja o README. -->
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- PREVIEW: impede que buscadores indexem esta versao, que ainda tem conteudo
+     provisorio (telefone, e-mails) e fotos de banco de imagens no lugar das
+     fotos reais. REMOVA esta linha quando o site for para o dominio oficial. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span class="topbar__item" data-i18n="topbar.cnpj">CNPJ: 23.724.071/0001-32</span>
+    <span class="topbar__sep"></span>
+    <span class="topbar__item topbar__item--hide-sm" data-i18n="topbar.location">Edifício Atrium — Manaus, Amazonas, Brasil</span>
+    <div class="topbar__right">
+      <a class="topbar__mail" href="mailto:institucional@ecomirai.com.br">institucional@ecomirai.com.br</a>
+      <div class="langswitch" role="group" aria-label="Language">
+        <button type="button" class="langswitch__btn is-active" data-lang="pt">PT</button>
+        <button type="button" class="langswitch__btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="brand" href="#top" aria-label="ECO MIRAI">
+      <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+        <path d="M22 6c6 5.5 9 10.8 9 16 0 5.3-4 10-9 16-5-6-9-10.7-9-16 0-5.2 3-10.5 9-16Z" fill="currentColor" opacity=".9"/>
+        <path d="M22 12v20" stroke="#fff" stroke-width="1.6" opacity=".7"/>
+      </svg>
+      <span class="brand__text">
+        <strong>ECO MIRAI</strong>
+        <em data-i18n="brand.tagline">Technology</em>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#sobre" data-i18n="nav.about">Sobre</a>
+      <a href="#estrategia" data-i18n="nav.strategy">Estratégia</a>
+      <a href="#atuacao" data-i18n="nav.business">Áreas de Atuação</a>
+      <a href="#solucoes" data-i18n="nav.solutions">Soluções</a>
+      <a href="#galeria" data-i18n="nav.gallery">Galeria</a>
+      <a href="#kerui" data-i18n="nav.partnership">Parceria KERUI</a>
+      <a href="#presenca" data-i18n="nav.presence">Presença</a>
+      <a href="#contato" class="nav__cta" data-i18n="nav.contact">Contato</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <svg class="hero__grid" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0b2239"/>
+          <stop offset="55%" stop-color="#0d3049"/>
+          <stop offset="100%" stop-color="#0a3d3a"/>
+        </linearGradient>
+        <pattern id="hp" width="56" height="56" patternUnits="userSpaceOnUse">
+          <path d="M56 0H0v56" fill="none" stroke="#7fd4c8" stroke-width=".5" opacity=".13"/>
+        </pattern>
+      </defs>
+      <rect width="1440" height="700" fill="url(#hg)"/>
+      <rect width="1440" height="700" fill="url(#hp)"/>
+      <g opacity=".18" stroke="#9fe3d6" fill="none" stroke-width="1.2">
+        <path d="M1040 700V330l90-70 90 70v370"/>
+        <path d="M1130 260V150M1075 700V420h110v280M1000 700l130-330 130 330"/>
+        <circle cx="1130" cy="140" r="7" fill="#9fe3d6" stroke="none"/>
+      </g>
+      <g opacity=".1" stroke="#cbb27a" fill="none" stroke-width="1">
+        <path d="M120 700V470h140v230M190 470V380M60 700l130-260 130 260"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container hero__inner">
+    <p class="hero__eyebrow" data-i18n="hero.eyebrow">Petróleo · Gás · Energia</p>
+    <h1 class="hero__title" data-i18n="hero.title">Conectando tecnologia global à energia do futuro</h1>
+    <p class="hero__lead" data-i18n="hero.lead">A ECO MIRAI TECHNOLOGY LTDA fornece equipamentos, serviços e soluções de engenharia de alta performance para a indústria de petróleo e gás no Brasil e na América Latina.</p>
+    <div class="hero__actions">
+      <a href="#sobre" class="btn btn--primary" data-i18n="hero.cta1">Conheça a empresa</a>
+      <a href="#contato" class="btn btn--ghost" data-i18n="hero.cta2">Fale com a Eco Mirai</a>
+    </div>
+  </div>
+
+  <div class="hero__stats">
+    <div class="container hero__stats-grid">
+      <div class="stat">
+        <span class="stat__value">5</span>
+        <span class="stat__label" data-i18n="hero.stat1">Áreas estratégicas de atuação</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">EPC</span>
+        <span class="stat__label" data-i18n="hero.stat2">Projetos turnkey de ponta a ponta</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">KERUI</span>
+        <span class="stat__label" data-i18n="hero.stat3">Parceria industrial estratégica</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">LATAM</span>
+        <span class="stat__label" data-i18n="hero.stat4">Atendimento em toda a América Latina</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="section" id="sobre">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__kicker" data-i18n="about.kicker">A Companhia</span>
+      <h2 class="sec-head__title" data-i18n="about.title">Sobre a Eco Mirai</h2>
+    </div>
+
+    <div class="about">
+      <div class="about__text">
+        <p class="lead" data-i18n="about.p1">A ECO MIRAI TECHNOLOGY LTDA, estabelecida em Manaus, Amazonas, nasce como uma empresa estratégica para atender o mercado brasileiro e latino-americano nos segmentos de petróleo, gás e energia.</p>
+        <p data-i18n="about.p2">Localizada no Edifício Atrium, em Manaus, a empresa atua como representante comercial, integradora de soluções e fornecedora de tecnologias avançadas para o setor de óleo e gás, conectando a experiência industrial global da KERUI GROUP às necessidades do mercado brasileiro.</p>
+        <p data-i18n="about.p3">Como associada à KERUI GROUP, uma das maiores fabricantes privadas e fornecedoras de equipamentos para petróleo e gás da China, a empresa reúne conhecimento técnico, inovação, experiência internacional e capacidade industrial para oferecer soluções completas ao mercado energético.</p>
+        <p data-i18n="about.p4">A Eco Mirai busca contribuir para o desenvolvimento do setor através da transferência de tecnologia, suporte técnico especializado, fabricação local e integração de soluções voltadas à eficiência e produtividade das operações petrolíferas.</p>
+      </div>
+
+      <aside class="about__card">
+        <h3 data-i18n="about.cardTitle">Identidade corporativa</h3>
+        <dl class="deflist">
+          <dt data-i18n="about.dt1">Razão social</dt>
+          <dd>ECO MIRAI TECHNOLOGY LTDA</dd>
+          <dt data-i18n="about.dt2">CNPJ</dt>
+          <dd>23.724.071/0001-32</dd>
+          <dt data-i18n="about.dt3">Sede</dt>
+          <dd data-i18n="about.dd3">Edifício Atrium — Manaus, AM, Brasil</dd>
+          <dt data-i18n="about.dt4">Setor</dt>
+          <dd data-i18n="about.dd4">Petróleo, gás e energia</dd>
+          <dt data-i18n="about.dt5">Cobertura</dt>
+          <dd data-i18n="about.dd5">Brasil e América Latina</dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISÃO / MISSÃO / VALORES ============ -->
+<section class="section section--alt" id="estrategia">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__kicker" data-i18n="strategy.kicker">Direcionamento</span>
+      <h2 class="sec-head__title" data-i18n="strategy.title">Visão, Missão e Valores</h2>
+    </div>
+
+    <div class="vm">
+      <article class="vm__card">
+        <span class="vm__tag" data-i18n="strategy.visionTag">Nossa Visão</span>
+        <p data-i18n="strategy.vision">Ser reconhecida como referência na América Latina em tecnologia, engenharia e fornecimento de soluções integradas para a indústria de petróleo e gás.</p>
+      </article>
+      <article class="vm__card vm__card--accent">
+        <span class="vm__tag" data-i18n="strategy.missionTag">Nossa Missão</span>
+        <p data-i18n="strategy.mission">Fornecer equipamentos, tecnologias e serviços de engenharia com excelência, segurança e inovação, agregando valor aos clientes e contribuindo para o desenvolvimento sustentável do setor energético.</p>
+      </article>
+    </div>
+
+    <h3 class="sub-head" data-i18n="values.title">Nossos Valores</h3>
+    <div class="values">
+      <article class="value">
+        <div class="value__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3Z"/></svg>
+        </div>
+        <h4 data-i18n="values.v1t">Excelência</h4>
+        <p data-i18n="values.v1d">Compromisso permanente com a qualidade de produtos e serviços.</p>
+      </article>
+      <article class="value">
+        <div class="value__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 3.6 10.8c-.6.4-.9 1-.9 1.7v.5H9.3v-.5c0-.7-.3-1.3-.9-1.7A6 6 0 0 1 12 3Z"/></svg>
+        </div>
+        <h4 data-i18n="values.v2t">Inovação</h4>
+        <p data-i18n="values.v2d">Investimento contínuo em tecnologia, pesquisa e desenvolvimento.</p>
+      </article>
+      <article class="value">
+        <div class="value__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-3.5 7-9V5.5L12 3 5 5.5V12c0 5.5 7 9 7 9Z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h4 data-i18n="values.v3t">Integridade</h4>
+        <p data-i18n="values.v3d">Atuação ética, transparente e responsável em todas as relações comerciais.</p>
+      </article>
+      <article class="value">
+        <div class="value__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c4.4 0 8-3.6 8-8V6.8L12 3 4 6.8V14c0 4.4 3.6 8 8 8Z"/><circle cx="12" cy="12" r="2.6"/></svg>
+        </div>
+        <h4 data-i18n="values.v4t">Segurança</h4>
+        <p data-i18n="values.v4d">Priorização da segurança das pessoas, operações e meio ambiente.</p>
+      </article>
+      <article class="value">
+        <div class="value__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c5-2.5 8-6.5 8-11a8 8 0 0 0-16 0c0 4.5 3 8.5 8 11Z"/><path d="M12 21V9M12 13l3.5-3.5M12 15l-3-3"/></svg>
+        </div>
+        <h4 data-i18n="values.v5t">Sustentabilidade</h4>
+        <p data-i18n="values.v5d">Busca constante por soluções que promovam eficiência energética e responsabilidade ambiental.</p>
+      </article>
+      <article class="value">
+        <div class="value__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8" fill="currentColor"/></svg>
+        </div>
+        <h4 data-i18n="values.v6t">Foco no Cliente</h4>
+        <p data-i18n="values.v6d">Compromisso com a satisfação e o sucesso dos nossos parceiros e clientes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÁREAS DE ATUAÇÃO ============ -->
+<section class="section" id="atuacao">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__kicker" data-i18n="business.kicker">Negócios</span>
+      <h2 class="sec-head__title" data-i18n="business.title">Áreas de Atuação</h2>
+      <p class="sec-head__lead" data-i18n="business.lead">Cinco frentes integradas que cobrem o ciclo completo de tecnologia, equipamentos e engenharia para campos de petróleo e gás.</p>
+    </div>
+
+    <div class="areas">
+      <article class="area">
+        <span class="area__num">01</span>
+        <h3 data-i18n="business.a1t">Pesquisa e Desenvolvimento (P&amp;D)</h3>
+        <p data-i18n="business.a1d">Desenvolvimento de tecnologias e soluções avançadas para exploração, produção e operação de campos petrolíferos.</p>
+      </article>
+      <article class="area">
+        <span class="area__num">02</span>
+        <h3 data-i18n="business.a2t">Fabricação de Equipamentos Petrolíferos</h3>
+        <p data-i18n="business.a2d">Fornecimento de equipamentos de alta performance para operações onshore e offshore, seguindo padrões internacionais de qualidade e segurança.</p>
+      </article>
+      <article class="area">
+        <span class="area__num">03</span>
+        <h3 data-i18n="business.a3t">Serviços Tecnológicos de Engenharia</h3>
+        <p data-i18n="business.a3d">Prestação de serviços especializados para otimização de processos, aumento da produtividade e eficiência operacional em campos de petróleo e gás.</p>
+      </article>
+      <article class="area">
+        <span class="area__num">04</span>
+        <h3 data-i18n="business.a4t">Contratos EPC Turnkey</h3>
+        <p data-i18n="business.a4d">Execução de projetos na modalidade EPC (Engineering, Procurement and Construction), oferecendo soluções completas desde a engenharia até a entrega final do empreendimento.</p>
+      </article>
+      <article class="area">
+        <span class="area__num">05</span>
+        <h3 data-i18n="business.a5t">Representação Comercial</h3>
+        <p data-i18n="business.a5d">Representação e comercialização de produtos, equipamentos e serviços de empresas líderes do setor de petróleo e gás, conectando tecnologias globais ao mercado brasileiro.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUÇÕES ============ -->
+<section class="section section--dark" id="solucoes">
+  <div class="container">
+    <div class="sec-head sec-head--light">
+      <span class="sec-head__kicker" data-i18n="solutions.kicker">Portfólio</span>
+      <h2 class="sec-head__title" data-i18n="solutions.title">Soluções e Serviços</h2>
+      <p class="sec-head__lead" data-i18n="solutions.lead">A Eco Mirai oferece suporte técnico especializado ao longo de toda a cadeia operacional de petróleo e gás.</p>
+    </div>
+
+    <ul class="sol-grid">
+      <li data-i18n="solutions.s1">Equipamentos para perfuração de poços</li>
+      <li data-i18n="solutions.s2">Equipamentos para produção de petróleo e gás</li>
+      <li data-i18n="solutions.s3">Sistemas de superfície</li>
+      <li data-i18n="solutions.s4">Soluções para intervenção em poços</li>
+      <li data-i18n="solutions.s5">Equipamentos para completação</li>
+      <li data-i18n="solutions.s6">Sistemas de automação e controle</li>
+      <li data-i18n="solutions.s7">Engenharia de campos petrolíferos</li>
+      <li data-i18n="solutions.s8">Serviços técnicos especializados</li>
+      <li data-i18n="solutions.s9">Gestão de projetos EPC</li>
+      <li data-i18n="solutions.s10">Suporte técnico e pós-venda</li>
+      <li data-i18n="solutions.s11">Consultoria tecnológica para o setor de energia</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ GALERIA ============ -->
+<section class="section" id="galeria">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__kicker" data-i18n="gallery.kicker">Registros</span>
+      <h2 class="sec-head__title" data-i18n="gallery.title">Galeria de Produtos e Instalações</h2>
+      <p class="sec-head__lead" data-i18n="gallery.lead">Equipamentos, operações e instalações da Eco Mirai. Clique em uma imagem para ampliar.</p>
+    </div>
+
+    <!--
+      COMO TROCAR AS FOTOS  /  HOW TO REPLACE THE PHOTOS
+      1. Copie os arquivos de imagem para a pasta  assets/galeria/
+      2. Em cada <img> abaixo, troque o  src  pelo nome do arquivo
+         (ex.: src="assets/galeria/planta-manaus.jpg")
+      3. Ajuste as legendas em  js/i18n.js  nas chaves  gallery.cap1 ... gallery.cap6
+         — lembre-se de alterar nos DOIS idiomas (pt e en)
+      Para ter mais ou menos fotos, duplique ou remova um bloco <figure class="shot">
+      inteiro e crie/remova a chave correspondente no dicionário.
+      Recomendado: JPG ou WebP, 1600x1100 px, até ~400 KB por imagem.
+    -->
+    <div class="gallery">
+      <figure class="shot">
+        <button type="button" class="shot__btn">
+          <img src="assets/galeria/plataforma-offshore.jpg" alt="" data-i18n-alt="gallery.cap1" loading="lazy" decoding="async" width="1600" height="1100">
+        </button>
+        <figcaption data-i18n="gallery.cap1">Foto 1 — substituir pela imagem real</figcaption>
+      </figure>
+      <figure class="shot">
+        <button type="button" class="shot__btn">
+          <img src="assets/galeria/unidade-perfuracao.jpg" alt="" data-i18n-alt="gallery.cap2" loading="lazy" decoding="async" width="1600" height="1100">
+        </button>
+        <figcaption data-i18n="gallery.cap2">Foto 2 — substituir pela imagem real</figcaption>
+      </figure>
+      <figure class="shot">
+        <button type="button" class="shot__btn">
+          <img src="assets/galeria/estruturas-maritimas.jpg" alt="" data-i18n-alt="gallery.cap3" loading="lazy" decoding="async" width="1600" height="1100">
+        </button>
+        <figcaption data-i18n="gallery.cap3">Foto 3 — substituir pela imagem real</figcaption>
+      </figure>
+      <figure class="shot">
+        <button type="button" class="shot__btn">
+          <img src="assets/galeria/campo-producao-onshore.jpg" alt="" data-i18n-alt="gallery.cap4" loading="lazy" decoding="async" width="1600" height="1100">
+        </button>
+        <figcaption data-i18n="gallery.cap4">Foto 4 — substituir pela imagem real</figcaption>
+      </figure>
+      <figure class="shot">
+        <button type="button" class="shot__btn">
+          <img src="assets/galeria/sistemas-superficie.jpg" alt="" data-i18n-alt="gallery.cap5" loading="lazy" decoding="async" width="1600" height="1100">
+        </button>
+        <figcaption data-i18n="gallery.cap5">Foto 5 — substituir pela imagem real</figcaption>
+      </figure>
+      <figure class="shot">
+        <button type="button" class="shot__btn">
+          <img src="assets/galeria/planta-processamento.jpg" alt="" data-i18n-alt="gallery.cap6" loading="lazy" decoding="async" width="1600" height="1100">
+        </button>
+        <figcaption data-i18n="gallery.cap6">Foto 6 — substituir pela imagem real</figcaption>
+      </figure>
+    </div>
+
+    <p class="gallery__note" data-i18n="gallery.note">As imagens acima são provisórias e devem ser substituídas pelas fotos oficiais antes da publicação.</p>
+  </div>
+</section>
+
+<!-- ============ PARCERIA KERUI ============ -->
+<section class="section" id="kerui">
+  <div class="container">
+    <div class="kerui">
+      <div class="kerui__text">
+        <span class="sec-head__kicker" data-i18n="kerui.kicker">Aliança Estratégica</span>
+        <h2 class="sec-head__title" data-i18n="kerui.title">Parceria Estratégica com a KERUI GROUP</h2>
+        <p data-i18n="kerui.p1">A ECO MIRAI TECHNOLOGY LTDA possui estreita colaboração com a KERUI GROUP, reconhecida globalmente por sua atuação no desenvolvimento, fabricação e fornecimento de equipamentos para a indústria de petróleo e gás.</p>
+        <p class="kerui__sub" data-i18n="kerui.p2">Esta parceria proporciona aos clientes brasileiros acesso a:</p>
+        <ul class="checklist">
+          <li data-i18n="kerui.b1">Tecnologia de classe mundial</li>
+          <li data-i18n="kerui.b2">Equipamentos de alto desempenho</li>
+          <li data-i18n="kerui.b3">Expertise internacional</li>
+          <li data-i18n="kerui.b4">Soluções customizadas</li>
+          <li data-i18n="kerui.b5">Suporte técnico especializado</li>
+          <li data-i18n="kerui.b6">Transferência de conhecimento e tecnologia</li>
+        </ul>
+      </div>
+      <div class="kerui__panel">
+        <div class="kerui__badge">KERUI GROUP</div>
+        <p data-i18n="kerui.panel">Uma das maiores fabricantes privadas e fornecedoras de equipamentos para petróleo e gás da China, com atuação industrial em escala global.</p>
+        <div class="kerui__meta">
+          <div><strong data-i18n="kerui.m1v">Global</strong><span data-i18n="kerui.m1l">Capacidade industrial</span></div>
+          <div><strong data-i18n="kerui.m2v">Onshore &amp; Offshore</strong><span data-i18n="kerui.m2l">Cobertura operacional</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPROMISSO + PRESENÇA ============ -->
+<section class="section section--alt" id="presenca">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__kicker" data-i18n="commit.kicker">Mercado</span>
+      <h2 class="sec-head__title" data-i18n="commit.title">Compromisso com o mercado brasileiro</h2>
+    </div>
+
+    <div class="twocol">
+      <div>
+        <p data-i18n="commit.p1">A Eco Mirai está comprometida com o crescimento da indústria nacional de petróleo e gás, atuando conforme as exigências regulatórias, técnicas e ambientais do Brasil.</p>
+        <p data-i18n="commit.p2">Nosso objetivo é atender às expectativas dos clientes por meio da oferta de produtos confiáveis, serviços eficientes, entrega pontual e suporte pós-venda de excelência.</p>
+        <p data-i18n="commit.p3">A empresa busca desenvolver relacionamentos duradouros baseados na confiança, inovação e geração de resultados para seus parceiros.</p>
+      </div>
+      <div>
+        <h3 class="sub-head sub-head--tight" data-i18n="presence.title">Presença na América Latina</h3>
+        <p data-i18n="presence.p1">A partir de sua base operacional em Manaus, a ECO MIRAI TECHNOLOGY LTDA está estrategicamente posicionada para atender projetos em todo o Brasil e em países da América Latina, contribuindo para a modernização e competitividade do setor energético regional.</p>
+        <div class="presence-pills">
+          <span data-i18n="presence.pill1">Base operacional: Manaus (AM)</span>
+          <span data-i18n="presence.pill2">Cobertura nacional</span>
+          <span data-i18n="presence.pill3">Projetos na América Latina</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="section section--dark" id="contato">
+  <div class="container">
+    <div class="sec-head sec-head--light">
+      <span class="sec-head__kicker" data-i18n="contact.kicker">Fale Conosco</span>
+      <h2 class="sec-head__title" data-i18n="contact.title">Contato</h2>
+      <p class="sec-head__lead" data-i18n="contact.lead">Direcione sua mensagem ao departamento responsável para um atendimento mais ágil.</p>
+    </div>
+
+    <div class="contact">
+      <div class="contact__depts">
+        <a class="dept" href="mailto:diretoria@ecomirai.com.br">
+          <span class="dept__label" data-i18n="contact.d1">Diretor Geral</span>
+          <span class="dept__mail">diretoria@ecomirai.com.br</span>
+        </a>
+        <a class="dept" href="mailto:institucional@ecomirai.com.br">
+          <span class="dept__label" data-i18n="contact.d2">Institucional</span>
+          <span class="dept__mail">institucional@ecomirai.com.br</span>
+        </a>
+        <a class="dept" href="mailto:juridico@ecomirai.com.br">
+          <span class="dept__label" data-i18n="contact.d3">Jurídico</span>
+          <span class="dept__mail">juridico@ecomirai.com.br</span>
+        </a>
+        <a class="dept" href="mailto:administrativo@ecomirai.com.br">
+          <span class="dept__label" data-i18n="contact.d4">Administrativo</span>
+          <span class="dept__mail">administrativo@ecomirai.com.br</span>
+        </a>
+        <a class="dept" href="mailto:comercial@ecomirai.com.br">
+          <span class="dept__label" data-i18n="contact.d5">Comercial</span>
+          <span class="dept__mail">comercial@ecomirai.com.br</span>
+        </a>
+      </div>
+
+      <aside class="contact__info">
+        <h3 data-i18n="contact.infoTitle">ECO MIRAI TECHNOLOGY LTDA</h3>
+        <ul class="infolist">
+          <li><span data-i18n="contact.i1">CNPJ</span><strong>23.724.071/0001-32</strong></li>
+          <li><span data-i18n="contact.i2">Endereço</span><strong data-i18n="contact.i2v">Edifício Atrium — Manaus, Amazonas, Brasil</strong></li>
+          <li><span data-i18n="contact.i3">E-mail geral</span><strong>contato@ecomirai.com.br</strong></li>
+          <li><span data-i18n="contact.i4">Telefone</span><strong>+55 (92) XXXX-XXXX</strong></li>
+          <li><span data-i18n="contact.i5">Atendimento</span><strong data-i18n="contact.i5v">Brasil e América Latina</strong></li>
+        </ul>
+        <p class="contact__note" data-i18n="contact.note">Telefone e e-mails institucionais em processo de definição final.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <strong>ECO MIRAI TECHNOLOGY LTDA</strong>
+      <p data-i18n="footer.slogan">"Conectando tecnologia global à energia do futuro."</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="#sobre" data-i18n="nav.about">Sobre</a>
+      <a href="#atuacao" data-i18n="nav.business">Áreas de Atuação</a>
+      <a href="#solucoes" data-i18n="nav.solutions">Soluções</a>
+      <a href="#galeria" data-i18n="nav.gallery">Galeria</a>
+      <a href="#kerui" data-i18n="nav.partnership">Parceria KERUI</a>
+      <a href="#contato" data-i18n="nav.contact">Contato</a>
+    </nav>
+  </div>
+  <div class="container footer__bottom">
+    <span data-i18n="footer.rights">© 2026 ECO MIRAI TECHNOLOGY LTDA. Todos os direitos reservados.</span>
+    <span>CNPJ 23.724.071/0001-32 · Manaus — AM</span>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX DA GALERIA ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxCaption" hidden>
+  <button type="button" class="lightbox__close" data-lb="close" aria-label="Fechar" data-i18n-aria="gallery.close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+  </button>
+  <button type="button" class="lightbox__nav lightbox__nav--prev" data-lb="prev" aria-label="Anterior" data-i18n-aria="gallery.prev">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+  </button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+    <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+  </figure>
+  <button type="button" class="lightbox__nav lightbox__nav--next" data-lb="next" aria-label="Próxima" data-i18n-aria="gallery.next">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+  </button>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
