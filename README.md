@@ -88,6 +88,24 @@ Para ter mais ou menos de seis fotos, duplique ou remova um bloco `<figure class
 
 Formato recomendado: JPG ou WebP, cerca de 1600×1100 px, até ~400 KB por imagem. As fotos são recortadas na proporção 16:11 na grade, mas aparecem inteiras na ampliação.
 
+## Mapa de atuação
+
+O mapa da seção **Presença** (`#presenca`) é um SVG desenhado à mão, sem biblioteca nem imagem externa. As formas usam **longitude e latitude reais**: o grupo tem `transform="scale(1,-1)"` porque no SVG o eixo Y cresce para baixo enquanto a latitude cresce para cima. Na prática, você escreve as coordenadas na ordem natural `longitude,latitude`.
+
+O `viewBox="-118 -33 84 89"` cobre da Baixa Califórnia (–118°) ao litoral leste do Brasil (–34°), e do norte do México (33°) à Terra do Fogo (–56°).
+
+**Para destacar um país** quando a atuação por lá for confirmada, acrescente um `<path>` com a classe `map__country` dentro do grupo espelhado, e a regra correspondente no CSS:
+
+```css
+.map__country{fill:var(--teal-300);stroke:#0a5f56;stroke-width:1;vector-effect:non-scaling-stroke}
+```
+
+**Para adicionar um marcador de cidade**, copie o bloco `.map__hq` e troque as coordenadas em `transform="translate(longitude, -latitude)"` — note o **sinal negativo na latitude**, porque o marcador fica fora do grupo espelhado. Manaus (–60,02; –3,1) vira `translate(-60.02, 3.1)`.
+
+> Atenção ao `transform-box: fill-box` na regra `.map__pulse`. Sem ele, o padrão do SVG (`view-box`) faz o `transform-origin: center` apontar para o centro do viewBox, e o anel pulsante aparece longe do marcador.
+
+O contorno é simplificado de propósito — é um mapa de referência institucional, não uma carta geográfica. O texto sob o mapa deixa claro que ele indica alcance comercial, não operações confirmadas país a país.
+
 ## Pendências de conteúdo
 
 Os itens abaixo foram inseridos como provisórios e precisam ser confirmados antes da publicação:

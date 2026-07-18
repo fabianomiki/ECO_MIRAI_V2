@@ -53,14 +53,37 @@
     </a>
 
     <nav class="nav" id="nav">
-      <a href="#sobre" data-i18n="nav.about">Sobre</a>
-      <a href="#estrategia" data-i18n="nav.strategy">Estratégia</a>
-      <a href="#atuacao" data-i18n="nav.business">Áreas de Atuação</a>
-      <a href="#solucoes" data-i18n="nav.solutions">Soluções</a>
-      <a href="#galeria" data-i18n="nav.gallery">Galeria</a>
-      <a href="#kerui" data-i18n="nav.partnership">Parceria KERUI</a>
-      <a href="#presenca" data-i18n="nav.presence">Presença</a>
-      <a href="#contato" class="nav__cta" data-i18n="nav.contact">Contato</a>
+      <div class="nav__item nav__item--has-menu">
+        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="menu-empresa">
+          <span data-i18n="nav.company">A Empresa</span>
+          <svg class="nav__chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2.5 4.5 3.5 3.5 3.5-3.5"/></svg>
+        </button>
+        <div class="nav__menu" id="menu-empresa">
+          <a href="#sobre" data-i18n="nav.about">Sobre</a>
+          <a href="#estrategia" data-i18n="nav.strategy">Estratégia</a>
+          <a href="#presenca" data-i18n="nav.presence">Presença</a>
+        </div>
+      </div>
+
+      <div class="nav__item nav__item--has-menu">
+        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="menu-negocios">
+          <span data-i18n="nav.businessGroup">Negócios</span>
+          <svg class="nav__chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2.5 4.5 3.5 3.5 3.5-3.5"/></svg>
+        </button>
+        <div class="nav__menu" id="menu-negocios">
+          <a href="#atuacao" data-i18n="nav.business">Áreas de Atuação</a>
+          <a href="#solucoes" data-i18n="nav.solutions">Soluções</a>
+          <a href="#kerui" data-i18n="nav.partnership">Parceria KERUI</a>
+        </div>
+      </div>
+
+      <div class="nav__item">
+        <a class="nav__link" href="#galeria" data-i18n="nav.gallery">Galeria</a>
+      </div>
+
+      <div class="nav__item">
+        <a href="#contato" class="nav__cta" data-i18n="nav.contact">Contato</a>
+      </div>
     </nav>
 
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
@@ -406,11 +429,58 @@
       <div>
         <h3 class="sub-head sub-head--tight" data-i18n="presence.title">Presença na América Latina</h3>
         <p data-i18n="presence.p1">A partir de sua base operacional em Manaus, a ECO MIRAI TECHNOLOGY LTDA está estrategicamente posicionada para atender projetos em todo o Brasil e em países da América Latina, contribuindo para a modernização e competitividade do setor energético regional.</p>
+      </div>
+    </div>
+
+    <!--
+      MAPA DE ATUACAO
+      As formas usam longitude/latitude reais. O grupo tem scale(1,-1) porque no
+      SVG o eixo Y cresce para baixo e a latitude cresce para cima — assim as
+      coordenadas podem ser escritas na ordem natural (longitude, latitude).
+      O contorno e simplificado de proposito: e um mapa de referencia
+      institucional, nao uma carta geografica.
+
+      Para destacar um pais especifico quando a atuacao for confirmada, veja as
+      instrucoes no README (secao "Mapa de atuacao").
+    -->
+    <div class="presence">
+      <div class="presence__map">
+        <svg viewBox="-118 -33 84 89" role="img" aria-labelledby="mapTitle mapDesc">
+          <title id="mapTitle" data-i18n="map.title">Mapa de atuação da Eco Mirai na América Latina</title>
+          <desc id="mapDesc" data-i18n="map.desc">Mapa da América Latina com o Brasil destacado e a base operacional de Manaus assinalada.</desc>
+
+          <g transform="scale(1,-1)" vector-effect="non-scaling-stroke">
+            <!-- Mexico continental + America Central -->
+            <path class="map__land" d="M-114,32.5 -111,31.3 -108,31.3 -106,31.8 -103,29 -101,29.8 -99,27.5 -97.5,26 -97.7,22 -96,19.5 -94,18.2 -92,18.7 -91,18.7 -90,21 -88,21.5 -86.8,21.5 -86.8,20 -87.5,18.2 -88.3,15.9 -86,16 -84,15.9 -83.2,15 -83.5,13 -83,11.5 -82.5,9.5 -81,9 -79,9.3 -77.4,8.7 -78,7.2 -80,7.2 -81.5,7.8 -83,8.5 -85,10 -85.8,11 -87,12.8 -89,13.5 -91,14 -92.3,14.5 -94,16 -96,15.7 -98,16.5 -100,17 -102,18 -104,19 -105.7,20.5 -105.5,22 -106.5,23.8 -108.5,25.5 -109.5,27 -111,27.9 -112.5,29.5 -114,31.7 Z"/>
+            <!-- Baja California -->
+            <path class="map__land" d="M-114.5,32.5 -116.9,32.5 -116.5,31 -115,28.5 -114,27.5 -112.5,26 -111,25 -109.5,23.3 -109.5,24.5 -110.5,25.5 -112,27.5 -113.5,29.5 -114.5,31.5 Z"/>
+            <!-- America do Sul -->
+            <path class="map__land" d="M-77,8 -75,11 -71,12 -66,10.6 -62,10.5 -60,8.6 -58,6.8 -54,5.5 -51,4 -50,0 -44,-2.5 -38,-4 -35,-5.8 -34.8,-8 -37,-11 -39,-13 -39,-17.5 -40.5,-20.5 -44,-23 -48,-25.5 -48.5,-28 -52,-32 -56,-35 -57,-38 -62,-40 -65,-43 -65.5,-47 -68,-50 -68,-52.5 -70,-55 -74,-52 -75,-48 -73.5,-44 -73,-40 -73,-36 -71.5,-33 -70.5,-30 -70.4,-25 -70.5,-21 -71,-18 -75,-15 -77,-12 -79,-8 -81,-6 -80.5,-4 -80,-2 -79,1 -78,2.5 -77.5,4 -77.3,6 Z"/>
+            <!-- Brasil -->
+            <path class="map__brazil" d="M-51.5,4 -50,0.5 -48,-1 -44,-2.5 -38,-4 -35,-5.8 -34.8,-8 -37,-11 -39,-13 -39,-17.5 -40.5,-20.5 -41,-22 -44,-23 -48,-25.5 -48.5,-28 -50,-29.5 -52,-32 -53.5,-33.7 -55.6,-31 -57.6,-30.2 -56,-27 -54.6,-25.6 -54.3,-24 -57.6,-22.1 -58,-20 -58.4,-16.3 -60.2,-15.1 -62.6,-13 -65.4,-11 -70,-11 -72.9,-9.4 -73.8,-7.3 -70.9,-4.4 -70,-2 -69.4,-1.1 -69,1.7 -67,2.8 -64,2 -60.7,1.3 -60.7,5.2 -56,2 -55,2.5 Z"/>
+          </g>
+
+          <!-- Marcador de Manaus: fora do grupo espelhado, com a latitude negada -->
+          <g class="map__hq" transform="translate(-60.02, 3.1)">
+            <circle class="map__pulse" r="1.4"/>
+            <circle class="map__dot" r="0.85"/>
+            <text class="map__label" x="2.2" y="0.9" data-i18n="map.manaus">Manaus</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="presence__info">
+        <ul class="map-legend">
+          <li><span class="map-legend__key map-legend__key--hq"></span><span data-i18n="map.legendHq">Base operacional — Manaus, Amazonas</span></li>
+          <li><span class="map-legend__key map-legend__key--brazil"></span><span data-i18n="map.legendBrazil">Atuação em todo o território brasileiro</span></li>
+          <li><span class="map-legend__key map-legend__key--latam"></span><span data-i18n="map.legendLatam">Alcance para projetos na América Latina</span></li>
+        </ul>
         <div class="presence-pills">
           <span data-i18n="presence.pill1">Base operacional: Manaus (AM)</span>
           <span data-i18n="presence.pill2">Cobertura nacional</span>
           <span data-i18n="presence.pill3">Projetos na América Latina</span>
         </div>
+        <p class="map__note" data-i18n="map.note">O mapa é ilustrativo e indica a região de alcance comercial da empresa, não operações confirmadas país a país.</p>
       </div>
     </div>
   </div>

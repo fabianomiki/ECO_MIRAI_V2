@@ -9,6 +9,8 @@ window.ECOMIRAI_I18N = {
 
     "brand.tagline": "Technology",
 
+    "nav.company": "A Empresa",
+    "nav.businessGroup": "Negócios",
     "nav.about": "Sobre",
     "nav.strategy": "Estratégia",
     "nav.business": "Áreas de Atuação",
@@ -132,6 +134,14 @@ window.ECOMIRAI_I18N = {
 
     "presence.title": "Presença na América Latina",
     "presence.p1": "A partir de sua base operacional em Manaus, a ECO MIRAI TECHNOLOGY LTDA está estrategicamente posicionada para atender projetos em todo o Brasil e em países da América Latina, contribuindo para a modernização e competitividade do setor energético regional.",
+    "map.title": "Mapa de atuação da Eco Mirai na América Latina",
+    "map.desc": "Mapa da América Latina com o Brasil destacado e a base operacional de Manaus assinalada.",
+    "map.manaus": "Manaus",
+    "map.legendHq": "Base operacional — Manaus, Amazonas",
+    "map.legendBrazil": "Atuação em todo o território brasileiro",
+    "map.legendLatam": "Alcance para projetos na América Latina",
+    "map.note": "O mapa é ilustrativo e indica a região de alcance comercial da empresa, não operações confirmadas país a país.",
+
     "presence.pill1": "Base operacional: Manaus (AM)",
     "presence.pill2": "Cobertura nacional",
     "presence.pill3": "Projetos na América Latina",
@@ -167,6 +177,8 @@ window.ECOMIRAI_I18N = {
 
     "brand.tagline": "Technology",
 
+    "nav.company": "The Company",
+    "nav.businessGroup": "Business",
     "nav.about": "About",
     "nav.strategy": "Strategy",
     "nav.business": "Business Areas",
@@ -290,6 +302,14 @@ window.ECOMIRAI_I18N = {
 
     "presence.title": "Presence in Latin America",
     "presence.p1": "From its operational base in Manaus, ECO MIRAI TECHNOLOGY LTDA is strategically positioned to serve projects throughout Brazil and across Latin America, contributing to the modernisation and competitiveness of the regional energy sector.",
+    "map.title": "Map of Eco Mirai's coverage across Latin America",
+    "map.desc": "Map of Latin America with Brazil highlighted and the Manaus operational base marked.",
+    "map.manaus": "Manaus",
+    "map.legendHq": "Operational base — Manaus, Amazonas",
+    "map.legendBrazil": "Coverage across all of Brazil",
+    "map.legendLatam": "Reach for projects across Latin America",
+    "map.note": "The map is illustrative and indicates the company's commercial reach, not confirmed country-by-country operations.",
+
     "presence.pill1": "Operational base: Manaus (AM)",
     "presence.pill2": "Nationwide coverage",
     "presence.pill3": "Projects across Latin America",

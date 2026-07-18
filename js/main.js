@@ -67,6 +67,70 @@
     });
   }
 
+  /* ---------- Menus suspensos ---------- */
+  var groups = Array.prototype.slice.call(document.querySelectorAll(".nav__item--has-menu"));
+  var hoverTimer = null;
+
+  function isDesktopNav() {
+    return window.matchMedia("(min-width: 861px)").matches;
+  }
+
+  function setGroup(group, open) {
+    group.querySelector(".nav__toggle").setAttribute("aria-expanded", String(open));
+    group.querySelector(".nav__menu").classList.toggle("is-open", open);
+  }
+
+  function closeGroups(except) {
+    groups.forEach(function (g) { if (g !== except) setGroup(g, false); });
+  }
+
+  groups.forEach(function (group) {
+    var toggle = group.querySelector(".nav__toggle");
+
+    toggle.addEventListener("click", function () {
+      var open = toggle.getAttribute("aria-expanded") === "true";
+      closeGroups(group);
+      setGroup(group, !open);
+    });
+
+    /* No desktop tambem abre ao passar o mouse; o atraso ao sair evita que o
+       menu feche quando o ponteiro cruza a borda entre o botao e o painel. */
+    group.addEventListener("mouseenter", function () {
+      if (!isDesktopNav()) return;
+      window.clearTimeout(hoverTimer);
+      closeGroups(group);
+      setGroup(group, true);
+    });
+
+    group.addEventListener("mouseleave", function () {
+      if (!isDesktopNav()) return;
+      hoverTimer = window.setTimeout(function () { setGroup(group, false); }, 180);
+    });
+
+    group.querySelectorAll(".nav__menu a").forEach(function (link) {
+      link.addEventListener("click", function () { setGroup(group, false); });
+    });
+  });
+
+  if (groups.length) {
+    document.addEventListener("keydown", function (event) {
+      if (event.key !== "Escape") return;
+      groups.forEach(function (g) {
+        if (g.querySelector(".nav__toggle").getAttribute("aria-expanded") !== "true") return;
+        setGroup(g, false);
+        g.querySelector(".nav__toggle").focus();
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      var navRoot = document.getElementById("nav");
+      if (navRoot && !navRoot.contains(event.target)) closeGroups(null);
+    });
+
+    /* Ao cruzar o breakpoint, o estado do menu anterior nao faz mais sentido */
+    window.addEventListener("resize", function () { closeGroups(null); });
+  }
+
   /* ---------- Header shadow on scroll ---------- */
   var header = document.getElementById("header");
   if (header) {
