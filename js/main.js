@@ -24,10 +24,16 @@
     });
 
     document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
-    if (table["meta.title"]) document.title = table["meta.title"];
+
+    /* Cada pagina declara <body data-page="..."> para receber seu proprio
+       title/description; sem isso todas as paginas herdariam o mesmo texto. */
+    var page = document.body.getAttribute("data-page") || "home";
+    var title = table["meta." + page + ".title"];
+    var descText = table["meta." + page + ".desc"];
+    if (title) document.title = title;
 
     var desc = document.querySelector('meta[name="description"]');
-    if (desc && table["meta.desc"]) desc.setAttribute("content", table["meta.desc"]);
+    if (desc && descText) desc.setAttribute("content", descText);
 
     document.querySelectorAll(".langswitch__btn").forEach(function (btn) {
       btn.classList.toggle("is-active", btn.dataset.lang === lang);

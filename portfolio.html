@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfólio — ECO MIRAI TECHNOLOGY</title>
+<meta name="description" content="Pacotes de compressores, processamento de gás natural, equipamentos de nitrogênio e geradores a gás do Grupo KERUI, representados no Brasil pela Eco Mirai.">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="portfolio">
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="ECO MIRAI">
+      <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+        <path d="M22 6c6 5.5 9 10.8 9 16 0 5.3-4 10-9 16-5-6-9-10.7-9-16 0-5.2 3-10.5 9-16Z" fill="currentColor" opacity=".9"/>
+        <path d="M22 12v20" stroke="#fff" stroke-width="1.6" opacity=".7"/>
+      </svg>
+      <span class="brand__text"><strong>ECO MIRAI</strong><em data-i18n="brand.tagline">Technology</em></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <div class="nav__item nav__item--has-menu">
+        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="menu-empresa">
+          <span data-i18n="nav.company">A Empresa</span>
+          <svg class="nav__chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2.5 4.5 3.5 3.5 3.5-3.5"/></svg>
+        </button>
+        <div class="nav__menu" id="menu-empresa">
+          <a href="empresa.html" data-i18n="nav.about">Quem Somos</a>
+          <a href="empresa.html#valores" data-i18n="nav.values">Missão e Valores</a>
+          <a href="empresa.html#presenca" data-i18n="nav.presence">Presença</a>
+        </div>
+      </div>
+
+      <div class="nav__item nav__item--has-menu">
+        <button type="button" class="nav__toggle is-current" aria-expanded="false" aria-controls="menu-portfolio">
+          <span data-i18n="nav.portfolio">Portfólio</span>
+          <svg class="nav__chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2.5 4.5 3.5 3.5 3.5-3.5"/></svg>
+        </button>
+        <div class="nav__menu" id="menu-portfolio">
+          <a href="portfolio.html#compressores" data-i18n="nav.compressors">Pacotes de Compressores</a>
+          <a href="portfolio.html#gas" data-i18n="nav.gas">Processamento de Gás Natural</a>
+          <a href="portfolio.html#nitrogenio" data-i18n="nav.nitrogen">Equipamentos de Nitrogênio</a>
+          <a href="portfolio.html#geradores" data-i18n="nav.gensets">Geradores a Gás</a>
+        </div>
+      </div>
+
+      <div class="nav__item"><a class="nav__link" href="kerui.html" data-i18n="nav.partnership">Parceria KERUI</a></div>
+      <div class="nav__item"><a href="contato.html" class="nav__cta" data-i18n="nav.contact">Contato</a></div>
+      <div class="nav__item nav__item--lang">
+        <div class="langswitch" role="group" aria-label="Language">
+          <button type="button" class="langswitch__btn is-active" data-lang="pt">PT</button>
+          <button type="button" class="langswitch__btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<section class="pagehead pagehead--dark">
+  <div class="container">
+    <p class="pagehead__kicker" data-i18n="portfolio.kicker">Portfólio</p>
+    <h1 class="pagehead__title" data-i18n="portfolio.title">Equipamentos e Soluções</h1>
+    <p class="pagehead__lead" data-i18n="portfolio.lead">Nove séries e mais de 400 categorias de produtos KERUI, organizadas em quatro linhas principais para o mercado brasileiro.</p>
+    <nav class="anchors">
+      <a href="#compressores" data-i18n="nav.compressors">Pacotes de Compressores</a>
+      <a href="#gas" data-i18n="nav.gas">Processamento de Gás Natural</a>
+      <a href="#nitrogenio" data-i18n="nav.nitrogen">Equipamentos de Nitrogênio</a>
+      <a href="#geradores" data-i18n="nav.gensets">Geradores a Gás</a>
+    </nav>
+  </div>
+</section>
+
+<!-- ============ 1. COMPRESSORES ============ -->
+<section class="section" id="compressores">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__kicker" data-i18n="comp.kicker">Linha 01</span>
+      <h2 class="sec-head__title" data-i18n="comp.title">Pacotes de Compressores</h2>
+      <p class="sec-head__lead" data-i18n="comp.lead">Unidades alternativas e de parafuso empacotadas pela KERUI para coleta, transporte, injeção e pressurização de gás, em aplicações upstream, midstream e downstream.</p>
+    </div>
+
+    <div class="highlight">
+      <div class="highlight__badge">ARIEL</div>
+      <div>
+        <h3 data-i18n="comp.ariel">Parceiro estratégico da Ariel</h3>
+        <p data-i18n="comp.arielD">Autorização que abrange toda a linha de compressores Ariel, mais de 12 anos de cooperação e mais de 300 unidades de compressores empacotadas pela KERUI.</p>
+      </div>
+    </div>
+
+    <div class="specs">
+      <article class="spec">
+        <h3 class="spec__title" data-i18n="comp.recip">Unidade de Compressor Alternativo</h3>
+        <div class="spec__figures">
+          <div class="spec__fig"><strong>7.400 kW</strong><span data-i18n="fig.power">Potência máx.</span></div>
+          <div class="spec__fig"><strong>70 MPa</strong><span data-i18n="fig.press">Pressão máx.</span></div>
+          <div class="spec__fig"><strong>6</strong><span data-i18n="fig.stages">Estágios</span></div>
+        </div>
+        <table class="spec__table">
+          <tbody>
+            <tr><th data-i18n="comp.sRange">Faixa de rotação</th><td>750 – 1.800 rpm</td></tr>
+            <tr><th data-i18n="comp.sPower">Potência máx.</th><td>7.400 kW</td></tr>
+            <tr><th data-i18n="comp.sPress">Pressão máx. de descarga</th><td>70 MPa</td></tr>
+            <tr><th data-i18n="comp.sFlow">Vazão máx.</th><td>300 × 10⁴ Nm³/d</td></tr>
+            <tr><th data-i18n="comp.sStages">Estágios máx.</th><td>6</td></tr>
+            <tr><th data-i18n="comp.sDrive">Acionamento</th><td data-i18n="comp.sDriveV">Motor a gás / elétrico / diesel</td></tr>
+            <tr><th data-i18n="comp.sCool">Resfriamento</th><td data-i18n="comp.sCoolV">A ar ou a água</td></tr>
+            <tr><th data-i18n="comp.sMedium">Meio</th><td data-i18n="comp.sMediumV1">Gás natural, ar, nitrogênio, hidrogênio, dióxido de carbono</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="spec">
+        <h3 class="spec__title" data-i18n="comp.screw">Unidade de Compressor de Parafuso</h3>
+        <div class="spec__figures">
+          <div class="spec__fig"><strong>4.500 kW</strong><span data-i18n="fig.power">Potência máx.</span></div>
+          <div class="spec__fig"><strong>5.000 rpm</strong><span data-i18n="fig.speed">Rotação máx.</span></div>
+          <div class="spec__fig"><strong>200 m³/min</strong><span data-i18n="fig.flow">Vazão máx.</span></div>
+        </div>
+        <table class="spec__table">
+          <tbody>
+            <tr><th data-i18n="comp.sRangeMax">Rotação máx.</th><td>5.000 rpm</td></tr>
+            <tr><th data-i18n="comp.sPower">Potência máx.</th><td>4.500 kW</td></tr>
+            <tr><th data-i18n="comp.sPress">Pressão máx. de descarga</th><td>4 MPa</td></tr>
+            <tr><th data-i18n="comp.sFlow">Vazão máx.</th><td>200 m³/min</td></tr>
+            <tr><th data-i18n="comp.sStages">Estágios máx.</th><td>2</td></tr>
+            <tr><th data-i18n="comp.sDrive">Acionamento</th><td data-i18n="comp.sDriveV">Motor a gás / elétrico / diesel</td></tr>
+            <tr><th data-i18n="comp.sCool">Resfriamento</th><td data-i18n="comp.sCoolV">A ar ou a água</td></tr>
+            <tr><th data-i18n="comp.sMedium">Meio</th><td data-i18n="comp.sMediumV2">Gás natural, gás associado, metano de carvão, fluido refrigerante, CO₂</td></tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
+
+    <h3 class="sub-head" data-i18n="comp.fields">Campos de aplicação</h3>
+    <div class="tagcols">
+      <div class="tagcol">
+        <h4 data-i18n="comp.up">Upstream</h4>
+        <ul><li data-i18n="comp.up1">Coleta de gás</li><li data-i18n="comp.up2">Gas lift</li><li data-i18n="comp.up3">Injeção de gás</li><li data-i18n="comp.up4">Perfuração</li></ul>
+      </div>
+      <div class="tagcol">
+        <h4 data-i18n="comp.mid">Midstream</h4>
+        <ul><li data-i18n="comp.mid1">Transporte</li><li data-i18n="comp.mid2">Armazenamento</li><li data-i18n="comp.mid3">Tratamento</li></ul>
+      </div>
+      <div class="tagcol">
+        <h4 data-i18n="comp.down">Downstream</h4>
+        <ul><li data-i18n="comp.down1">Refino</li><li data-i18n="comp.down2">Energia elétrica</li><li data-i18n="comp.down3">GNC e GNL</li></ul>
+      </div>
+      <div class="tagcol">
+        <h4 data-i18n="comp.other">Outros campos</h4>
+        <ul><li data-i18n="comp.other1">Gás de carvão (CBM)</li><li data-i18n="comp.other2">Metalurgia</li><li data-i18n="comp.other3">Testes</li></ul>
+      </div>
+    </div>
+
+    <h3 class="sub-head" data-i18n="comp.brands">Integração de recursos</h3>
+    <p class="brands__lead" data-i18n="comp.brandsD">Os pacotes integram componentes de fabricantes de referência mundial, selecionados conforme a especificação de cada projeto.</p>
+    <ul class="brands">
+      <li>Caterpillar</li><li>Waukesha</li><li>Ariel</li><li>ABB</li><li>SIEMENS</li>
+      <li>Emerson</li><li>Fisher</li><li>Neway</li><li>Rosemount</li><li>Honeywell</li>
+      <li>WIKA</li><li>Allen-Bradley</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 2. PROCESSAMENTO DE GÁS ============ -->
+<section class="section section--alt" id="gas">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__kicker" data-i18n="gas.kicker">Linha 02</span>
+      <h2 class="sec-head__title" data-i18n="gas.title">Equipamentos de Processamento de Gás Natural</h2>
+      <p class="sec-head__lead" data-i18n="gas.lead">Equipamentos montados em skid para coleta e tratamento, unidades de processo e soluções personalizadas para produção de gás.</p>
+    </div>
+
+    <div class="cardgrid">
+      <article class="card">
+        <h3 data-i18n="gas.g1t">Equipamentos montados em skid</h3>
+        <ul class="ticks">
+          <li data-i18n="gas.g1a">Separador trifásico e bifásico de alta eficiência</li>
+          <li data-i18n="gas.g1b">Separador de produção quatro-em-um</li>
+          <li data-i18n="gas.g1c">Separador por coalescência</li>
+          <li data-i18n="gas.g1d">Skid de injeção de produtos químicos</li>
+          <li data-i18n="gas.g1e">Forno de aquecimento com camisa d'água</li>
+          <li data-i18n="gas.g1f">Skid de medição e regulagem de pressão</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3 data-i18n="gas.g2t">Unidades de processo</h3>
+        <ul class="ticks">
+          <li data-i18n="gas.g2a">Desacidificação por alcanolamina (MDEA / MEA)</li>
+          <li data-i18n="gas.g2b">Separação por membrana</li>
+          <li data-i18n="gas.g2c">Desidratação por trietilenoglicol (TEG)</li>
+          <li data-i18n="gas.g2d">Desidratação por peneira molecular</li>
+          <li data-i18n="gas.g2e">Recuperação de GLP e condensado</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3 data-i18n="gas.g3t">Soluções personalizadas</h3>
+        <ul class="ticks">
+          <li data-i18n="gas.g3a">Recuperação de gás de tocha</li>
+          <li data-i18n="gas.g3b">Sistema de incremento da produção de gás</li>
+          <li data-i18n="gas.g3c">Recuperação de gás de poços isolados</li>
+          <li data-i18n="gas.g3d">Gas lift e recuperação de gás comprimido</li>
+          <li data-i18n="gas.g3e">Geração de oxigênio por adsorção (PSA)</li>
+          <li data-i18n="gas.g3f">Remoção de nitrogênio do gás natural</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="specs specs--three">
+      <article class="spec">
+        <h3 class="spec__title" data-i18n="gas.s1">Desacidificação</h3>
+        <div class="spec__figures">
+          <div class="spec__fig"><strong>1 ppm</strong><span data-i18n="fig.eff">Eficiência</span></div>
+          <div class="spec__fig"><strong>MDEA / MEA</strong><span data-i18n="fig.solvent">Solventes</span></div>
+        </div>
+        <p class="spec__note" data-i18n="gas.s1d">Remoção de gases ácidos como CO₂ e H₂S por solução aquosa de alcanolamina, de forma seletiva ou não seletiva.</p>
+      </article>
+
+      <article class="spec">
+        <h3 class="spec__title" data-i18n="gas.s2">Desidratação por TEG</h3>
+        <div class="spec__figures">
+          <div class="spec__fig"><strong>≥ −40 °C</strong><span data-i18n="fig.dew">Ponto de orvalho</span></div>
+        </div>
+        <p class="spec__note" data-i18n="gas.s2d">Remoção do vapor d'água antes do transporte por dutos, em campos de petróleo e gás.</p>
+      </article>
+
+      <article class="spec">
+        <h3 class="spec__title" data-i18n="gas.s3">Coalescência</h3>
+        <div class="spec__figures">
+          <div class="spec__fig"><strong>99%</strong><span data-i18n="fig.sep">Separação</span></div>
+          <div class="spec__fig"><strong>200 × 10⁴ Nm³/d</strong><span data-i18n="fig.flow">Vazão máx.</span></div>
+        </div>
+        <p class="spec__note" data-i18n="gas.s3d">Separação de traços de água livre e óleo do gás natural por elemento filtrante coalescente.</p>
+        <table class="spec__table"><tbody>
+          <tr><th data-i18n="gas.press">Classe de pressão</th><td>0,4 – 10,0 MPa</td></tr>
+        </tbody></table>
+      </article>
+    </div>
+
+    <div class="callout">
+      <h3 data-i18n="gas.mod">Soluções modulares de GNL + GLP</h3>
+      <p data-i18n="gas.modD">Plantas modulares de pequeno e médio porte de até 10 MMSCFD, com capacidade de liquefação de 1 a 10 MMSCFD para gás de poço, gás associado e gás de xisto. O escopo inclui pré-tratamento e compressão, desacidificação, desidratação e remoção de mercúrio, recuperação de GLP, unidade criogênica, recuperação de BOG e armazenamento e carregamento.</p>
+    </div>
+
+    <div class="callout callout--alt">
+      <h3 data-i18n="gas.boost">Sistema de incremento da produção de gás</h3>
+      <p data-i18n="gas.boostD">Instalado próximo à cabeça do poço para minimizar a pressão e recuperar produção em poços maduros (brownfield). Capacidade de 30 MMSCFD, pressão de entrada de 0,2 bar e de saída de 50 bar, montado em skid ou reboque para mobilização rápida.</p>
+    </div>
+
+    <div class="callout">
+      <h3 data-i18n="gas.flue">Recuperação e injeção de gás de combustão</h3>
+      <p data-i18n="gas.flueD">Reaproveita o calor do gás de combustão da caldeira de injeção de vapor e injeta esse gás na camada de petróleo, aumentando a recuperação de óleo e reduzindo emissões. Vazão de 1.200 Nm³/h e pressão de 25 MPa após quatro estágios de compressão. Em teste de campo em Binzhou (Shandong), com injeção cíclica de vapor assistida por gás de combustão, a produção diária do poço subiu de 3,9 t/d para 10,8 t/d e o corte de água caiu de 60,9% para 45,6%.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. NITROGÊNIO ============ -->
+<section class="section" id="nitrogenio">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__kicker" data-i18n="n2.kicker">Linha 03</span>
+      <h2 class="sec-head__title" data-i18n="n2.title">Equipamentos de Nitrogênio</h2>
+      <p class="sec-head__lead" data-i18n="n2.lead">Geração por separação por membrana, geração por adsorção (PSA) e bombeamento de nitrogênio líquido, em configurações montadas em skid, reboque ou caminhão.</p>
+    </div>
+
+    <div class="specs specs--three">
+      <article class="spec">
+        <h3 class="spec__title" data-i18n="n2.s1">Geração por membrana</h3>
+        <div class="spec__figures">
+          <div class="spec__fig"><strong>3.600 Nm³/h</strong><span data-i18n="fig.flow">Vazão máx.</span></div>
+          <div class="spec__fig"><strong>99,5%</strong><span data-i18n="fig.purity">Pureza máx.</span></div>
+          <div class="spec__fig"><strong>70 MPa</strong><span data-i18n="fig.press">Pressão máx.</span></div>
+        </div>
+        <table class="spec__table"><tbody>
+          <tr><th data-i18n="n2.flow">Vazão</th><td>20 – 3.600 Nm³/h</td></tr>
+          <tr><th data-i18n="n2.pur">Pureza</th><td>95% – 99,5%</td></tr>
+          <tr><th data-i18n="n2.press">Pressão nominal</th><td>0,5 – 70 MPa</td></tr>
+          <tr><th data-i18n="n2.temp">Temperatura ambiente</th><td>−45 °C a +55 °C</td></tr>
+        </tbody></table>
+      </article>
+
+      <article class="spec">
+        <h3 class="spec__title" data-i18n="n2.s2">Geração PSA</h3>
+        <div class="spec__figures">
+          <div class="spec__fig"><strong>5.000 Nm³/h</strong><span data-i18n="fig.flow">Vazão máx.</span></div>
+          <div class="spec__fig"><strong>99,999%</strong><span data-i18n="fig.purity">Pureza máx.</span></div>
+          <div class="spec__fig"><strong>70 MPa</strong><span data-i18n="fig.press">Pressão máx.</span></div>
+        </div>
+        <table class="spec__table"><tbody>
+          <tr><th data-i18n="n2.flow">Vazão</th><td>2 – 5.000 Nm³/h</td></tr>
+          <tr><th data-i18n="n2.pur">Pureza</th><td>95% – 99,999%</td></tr>
+          <tr><th data-i18n="n2.press">Pressão nominal</th><td>0,1 – 70 MPa</td></tr>
+          <tr><th data-i18n="n2.norm">Norma aplicável</th><td>GB, ASME</td></tr>
+        </tbody></table>
+      </article>
+
+      <article class="spec">
+        <h3 class="spec__title" data-i18n="n2.s3">Bombeamento de nitrogênio líquido</h3>
+        <div class="spec__figures">
+          <div class="spec__fig"><strong>1.100.000 SCFH</strong><span data-i18n="fig.flow">Vazão máx.</span></div>
+          <div class="spec__fig"><strong>99,999%</strong><span data-i18n="fig.purity">Pureza máx.</span></div>
+          <div class="spec__fig"><strong>15.000 psi</strong><span data-i18n="fig.press">Pressão máx.</span></div>
+        </div>
+        <table class="spec__table"><tbody>
+          <tr><th data-i18n="n2.flow">Vazão</th><td>90.000 – 1.100.000 SCFH</td></tr>
+          <tr><th data-i18n="n2.pur">Pureza</th><td>99,999%</td></tr>
+          <tr><th data-i18n="n2.pmax">Pressão máx.</th><td>15.000 psi</td></tr>
+          <tr><th data-i18n="n2.norm">Norma aplicável</th><td>GB, ASME</td></tr>
+        </tbody></table>
+      </article>
+    </div>
+
+    <h3 class="sub-head" data-i18n="n2.conf">Configurações disponíveis</h3>
+    <div class="tagcols">
+      <div class="tagcol">
+        <h4 data-i18n="n2.t1">Transporte</h4>
+        <ul><li data-i18n="n2.t1a">Montado em skid</li><li data-i18n="n2.t1b">Montado em reboque</li><li data-i18n="n2.t1c">Montado em caminhão</li></ul>
+      </div>
+      <div class="tagcol">
+        <h4 data-i18n="n2.t2">Zona de aplicação</h4>
+        <ul><li data-i18n="n2.t2a">Onshore</li><li data-i18n="n2.t2b">Offshore</li><li data-i18n="n2.t2c">Zona fria</li><li data-i18n="n2.t2d">Zona de alta temperatura</li></ul>
+      </div>
+      <div class="tagcol">
+        <h4 data-i18n="n2.t3">Acionamento</h4>
+        <ul><li data-i18n="n2.t3a">Motor diesel</li><li data-i18n="n2.t3b">Motor elétrico</li><li data-i18n="n2.t3c">GNC / GNL</li></ul>
+      </div>
+      <div class="tagcol">
+        <h4 data-i18n="n2.t4">Aplicações</h4>
+        <ul><li data-i18n="n2.t4a">Perfuração underbalanced</li><li data-i18n="n2.t4b">Estimulação de petróleo e gás</li><li data-i18n="n2.t4c">Acidificação e fraturamento</li><li data-i18n="n2.t4d">Purga e substituição de gases</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. GERADORES ============ -->
+<section class="section section--dark" id="geradores">
+  <div class="container">
+    <div class="sec-head sec-head--light">
+      <span class="sec-head__kicker" data-i18n="gen.kicker">Linha 04</span>
+      <h2 class="sec-head__title" data-i18n="gen.title">Geradores a Gás</h2>
+      <p class="sec-head__lead" data-i18n="gen.lead">Série KGW com motor Waukesha, para aproveitamento de gás associado em campos de petróleo e para geração distribuída a gás natural.</p>
+    </div>
+
+    <div class="featgrid">
+      <article class="feat">
+        <h3 data-i18n="gen.f1t">Alta confiabilidade</h3>
+        <p data-i18n="gen.f1d">Disponibilidade de até 98% e intervalo de revisão geral de 60.000 a 80.000 horas.</p>
+      </article>
+      <article class="feat">
+        <h3 data-i18n="gen.f2t">Excelente capacidade de carga</h3>
+        <p data-i18n="gen.f2d">Tomada de carga em degrau de até 65%, com potência principal para perfuração e acionamento direto de grandes cargas.</p>
+      </article>
+      <article class="feat">
+        <h3 data-i18n="gen.f3t">CCHP e maior eficiência</h3>
+        <p data-i18n="gen.f3d">Eficiência termoelétrica de ≥85% e eficiência de geração de cerca de 40%, adequado a projetos de energia distribuída.</p>
+      </article>
+      <article class="feat">
+        <h3 data-i18n="gen.f4t">Baixa emissão</h3>
+        <p data-i18n="gen.f4d">Catalisador de três vias e controle da relação ar/combustível, com emissões de NOx inferiores a 0,15 g/bhp-hr.</p>
+      </article>
+      <article class="feat">
+        <h3 data-i18n="gen.f5t">Adaptabilidade</h3>
+        <p data-i18n="gen.f5d">Operação em elevada altitude e temperatura, com diversos modos de operação e adequação a diferentes gases combustíveis.</p>
+      </article>
+      <article class="feat">
+        <h3 data-i18n="gen.f6t">Automático e inteligente</h3>
+        <p data-i18n="gen.f6d">Sistema de controle original Waukesha, com operação automática e sem supervisão.</p>
+      </article>
+    </div>
+
+    <div class="callout callout--dark">
+      <h3 data-i18n="gen.app1">Aproveitamento do gás associado</h3>
+      <p data-i18n="gen.app1d">Usar o gás associado do próprio campo como combustível, com aproveitamento do calor residual, alimenta os equipamentos de produção e as instalações de apoio de forma mais econômica e sustentável do que um grupo gerador a diesel.</p>
+    </div>
+
+    <div class="callout callout--dark">
+      <h3 data-i18n="gen.app2">Geração distribuída e CCHP</h3>
+      <p data-i18n="gen.app2d">Centrais distribuídas a gás natural que aproveitam os gases de exaustão e o calor da água das camisas dos cilindros para fornecer calor, energia e refrigeração — atendendo hospitais, supermercados, edifícios de escritórios e parques industriais.</p>
+    </div>
+
+    <div class="callout callout--dark">
+      <h3 data-i18n="gen.case">Caso de sucesso — OGDCL, Paquistão</h3>
+      <p data-i18n="gen.caseD">Capacidade instalada de 17,5 MW (5 × 3.500 kW), modelo KGW3500GF-T com motor Waukesha, em operação isolada (ilhada) utilizando gás associado como combustível.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA ============ -->
+<section class="section" id="galeria">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__kicker" data-i18n="gallery.kicker">Registros</span>
+      <h2 class="sec-head__title" data-i18n="gallery.title">Galeria</h2>
+      <p class="sec-head__lead" data-i18n="gallery.lead">Equipamentos, operações e instalações do setor. Clique em uma imagem para ampliar.</p>
+    </div>
+
+    <div class="gallery">
+      <figure class="shot"><button type="button" class="shot__btn" data-i18n-aria="gallery.open" aria-label="Ampliar imagem"><img src="assets/galeria/compressor-alternativo-skid.jpg" alt="Unidade compressora alternativa montada em skid" data-i18n-alt="gallery.cap1" loading="lazy"></button><figcaption data-i18n="gallery.cap1">Unidade compressora alternativa montada em skid</figcaption></figure>
+      <figure class="shot"><button type="button" class="shot__btn" data-i18n-aria="gallery.open" aria-label="Ampliar imagem"><img src="assets/galeria/pacote-compressor-vasos.jpg" alt="Pacote de compressor com vasos de processo e tubulação em skid único" data-i18n-alt="gallery.cap2" loading="lazy"></button><figcaption data-i18n="gallery.cap2">Pacote de compressor com vasos de processo e tubulação em skid único</figcaption></figure>
+      <figure class="shot"><button type="button" class="shot__btn" data-i18n-aria="gallery.open" aria-label="Ampliar imagem"><img src="assets/galeria/compressor-motor-gas.jpg" alt="Unidade compressora com motor a gás e resfriador a ar montado em skid" data-i18n-alt="gallery.cap3" loading="lazy"></button><figcaption data-i18n="gallery.cap3">Unidade compressora com motor a gás e resfriador a ar montado em skid</figcaption></figure>
+      <figure class="shot"><button type="button" class="shot__btn" data-i18n-aria="gallery.open" aria-label="Ampliar imagem"><img src="assets/galeria/compressor-motor-eletrico.jpg" alt="Unidade compressora acionada por motor elétrico, montada em skid" data-i18n-alt="gallery.cap4" loading="lazy"></button><figcaption data-i18n="gallery.cap4">Unidade compressora acionada por motor elétrico, montada em skid</figcaption></figure>
+      <figure class="shot"><button type="button" class="shot__btn" data-i18n-aria="gallery.open" aria-label="Ampliar imagem"><img src="assets/galeria/vaso-pressao-horizontal.jpg" alt="Vaso de pressão horizontal fabricado pela KERUI" data-i18n-alt="gallery.cap5" loading="lazy"></button><figcaption data-i18n="gallery.cap5">Vaso de pressão horizontal fabricado pela KERUI</figcaption></figure>
+      <figure class="shot"><button type="button" class="shot__btn" data-i18n-aria="gallery.open" aria-label="Ampliar imagem"><img src="assets/galeria/unidade-nitrogenio-skid.jpg" alt="Unidade de geração de nitrogênio montada em skid" data-i18n-alt="gallery.cap6" loading="lazy"></button><figcaption data-i18n="gallery.cap6">Unidade de geração de nitrogênio montada em skid</figcaption></figure>
+      <figure class="shot"><button type="button" class="shot__btn" data-i18n-aria="gallery.open" aria-label="Ampliar imagem"><img src="assets/galeria/unidade-nitrogenio-psa.jpg" alt="Unidade de geração de nitrogênio por adsorção (PSA)" data-i18n-alt="gallery.cap7" loading="lazy"></button><figcaption data-i18n="gallery.cap7">Unidade de geração de nitrogênio por adsorção (PSA)</figcaption></figure>
+      <figure class="shot"><button type="button" class="shot__btn" data-i18n-aria="gallery.open" aria-label="Ampliar imagem"><img src="assets/galeria/unidade-nitrogenio-caminhao.jpg" alt="Unidade de nitrogênio montada sobre caminhão para operação em campo" data-i18n-alt="gallery.cap8" loading="lazy"></button><figcaption data-i18n="gallery.cap8">Unidade de nitrogênio montada sobre caminhão para operação em campo</figcaption></figure>
+      <figure class="shot"><button type="button" class="shot__btn" data-i18n-aria="gallery.open" aria-label="Ampliar imagem"><img src="assets/galeria/unidade-perfuracao-ar.jpg" alt="Unidade móvel de perfuração a ar NZD-1800/1500Q montada em carreta" data-i18n-alt="gallery.cap9" loading="lazy"></button><figcaption data-i18n="gallery.cap9">Unidade móvel de perfuração a ar NZD-1800/1500Q montada em carreta</figcaption></figure>
+    </div>
+
+    <p class="gallery__note" data-i18n="gallery.note">Imagens de equipamentos, instalações e projetos do Grupo KERUI, fabricante parceiro representado no Brasil pela Eco Mirai. Reproduzidas do material técnico oficial da KERUI.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Galeria">
+  <button type="button" class="lightbox__close" data-lb="close" data-i18n-aria="gallery.close" aria-label="Fechar">&times;</button>
+  <button type="button" class="lightbox__nav lightbox__nav--prev" data-lb="prev" data-i18n-aria="gallery.prev" aria-label="Imagem anterior">&#8249;</button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" id="lightboxImg" alt="">
+    <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+  </figure>
+  <button type="button" class="lightbox__nav lightbox__nav--next" data-lb="next" data-i18n-aria="gallery.next" aria-label="Próxima imagem">&#8250;</button>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <strong>ECO MIRAI TECHNOLOGY LTDA</strong>
+      <p data-i18n="footer.slogan">"Conectando a força industrial da China às oportunidades estratégicas do Brasil."</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="empresa.html" data-i18n="nav.about">Quem Somos</a>
+      <a href="portfolio.html" data-i18n="nav.portfolio">Portfólio</a>
+      <a href="kerui.html" data-i18n="nav.partnership">Parceria KERUI</a>
+      <a href="contato.html" data-i18n="nav.contact">Contato</a>
+    </nav>
+  </div>
+  <div class="container footer__bottom">
+    <span data-i18n="footer.rights">© 2026 ECO MIRAI TECHNOLOGY LTDA. Todos os direitos reservados.</span>
+    <span>CNPJ 23.724.071/0001-32 · Manaus — AM</span>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

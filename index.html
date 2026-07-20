@@ -3,53 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ECO MIRAI TECHNOLOGY — Tecnologia e Soluções para Petróleo e Gás</title>
-<meta name="description" content="ECO MIRAI TECHNOLOGY LTDA — Tecnologia, inovação e excelência para a indústria de petróleo e gás no Brasil e América Latina. Associada à KERUI GROUP.">
-<!-- O site não carrega nenhum recurso externo: fontes são do sistema e todas as
-     imagens são locais. A CSP abaixo trava isso e neutraliza injeção de scripts.
-     Em produção, envie também o cabeçalho X-Frame-Options / frame-ancestors
-     (não funciona via <meta>) — veja o README. -->
+<title>ECO MIRAI TECHNOLOGY — Representação Comercial Internacional</title>
+<meta name="description" content="ECO MIRAI TECHNOLOGY LTDA — Representante oficial do Grupo KERUI no Brasil. Equipamentos e soluções industriais para petróleo e gás.">
 <meta http-equiv="Content-Security-Policy"
       content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<!-- PREVIEW: impede que buscadores indexem esta versao, que ainda tem conteudo
-     provisorio (telefone, e-mails) e fotos de banco de imagens no lugar das
-     fotos reais. REMOVA esta linha quando o site for para o dominio oficial. -->
+<!-- PREVIEW: remover quando o site for para o dominio oficial. -->
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-page="home">
 
-<!-- ============ TOP BAR ============ -->
-<div class="topbar">
-  <div class="container topbar__inner">
-    <span class="topbar__item" data-i18n="topbar.cnpj">CNPJ: 23.724.071/0001-32</span>
-    <span class="topbar__sep"></span>
-    <span class="topbar__item topbar__item--hide-sm" data-i18n="topbar.location">Edifício Atrium — Manaus, Amazonas, Brasil</span>
-    <div class="topbar__right">
-      <a class="topbar__mail" href="mailto:institucional@ecomirai.com.br">institucional@ecomirai.com.br</a>
-      <div class="langswitch" role="group" aria-label="Language">
-        <button type="button" class="langswitch__btn is-active" data-lang="pt">PT</button>
-        <button type="button" class="langswitch__btn" data-lang="en">EN</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ============ HEADER ============ -->
 <header class="header" id="header">
   <div class="container header__inner">
-    <a class="brand" href="#top" aria-label="ECO MIRAI">
+    <a class="brand" href="index.html" aria-label="ECO MIRAI">
       <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
         <circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
         <path d="M22 6c6 5.5 9 10.8 9 16 0 5.3-4 10-9 16-5-6-9-10.7-9-16 0-5.2 3-10.5 9-16Z" fill="currentColor" opacity=".9"/>
         <path d="M22 12v20" stroke="#fff" stroke-width="1.6" opacity=".7"/>
       </svg>
-      <span class="brand__text">
-        <strong>ECO MIRAI</strong>
-        <em data-i18n="brand.tagline">Technology</em>
-      </span>
+      <span class="brand__text"><strong>ECO MIRAI</strong><em data-i18n="brand.tagline">Technology</em></span>
     </a>
 
     <nav class="nav" id="nav">
@@ -59,30 +33,32 @@
           <svg class="nav__chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2.5 4.5 3.5 3.5 3.5-3.5"/></svg>
         </button>
         <div class="nav__menu" id="menu-empresa">
-          <a href="#sobre" data-i18n="nav.about">Sobre</a>
-          <a href="#estrategia" data-i18n="nav.strategy">Estratégia</a>
-          <a href="#presenca" data-i18n="nav.presence">Presença</a>
+          <a href="empresa.html" data-i18n="nav.about">Quem Somos</a>
+          <a href="empresa.html#valores" data-i18n="nav.values">Missão e Valores</a>
+          <a href="empresa.html#presenca" data-i18n="nav.presence">Presença</a>
         </div>
       </div>
 
       <div class="nav__item nav__item--has-menu">
-        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="menu-negocios">
-          <span data-i18n="nav.businessGroup">Negócios</span>
+        <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="menu-portfolio">
+          <span data-i18n="nav.portfolio">Portfólio</span>
           <svg class="nav__chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2.5 4.5 3.5 3.5 3.5-3.5"/></svg>
         </button>
-        <div class="nav__menu" id="menu-negocios">
-          <a href="#atuacao" data-i18n="nav.business">Áreas de Atuação</a>
-          <a href="#solucoes" data-i18n="nav.solutions">Soluções</a>
-          <a href="#kerui" data-i18n="nav.partnership">Parceria KERUI</a>
+        <div class="nav__menu" id="menu-portfolio">
+          <a href="portfolio.html#compressores" data-i18n="nav.compressors">Pacotes de Compressores</a>
+          <a href="portfolio.html#gas" data-i18n="nav.gas">Processamento de Gás Natural</a>
+          <a href="portfolio.html#nitrogenio" data-i18n="nav.nitrogen">Equipamentos de Nitrogênio</a>
+          <a href="portfolio.html#geradores" data-i18n="nav.gensets">Geradores a Gás</a>
         </div>
       </div>
 
-      <div class="nav__item">
-        <a class="nav__link" href="#galeria" data-i18n="nav.gallery">Galeria</a>
-      </div>
-
-      <div class="nav__item">
-        <a href="#contato" class="nav__cta" data-i18n="nav.contact">Contato</a>
+      <div class="nav__item"><a class="nav__link" href="kerui.html" data-i18n="nav.partnership">Parceria KERUI</a></div>
+      <div class="nav__item"><a href="contato.html" class="nav__cta" data-i18n="nav.contact">Contato</a></div>
+      <div class="nav__item nav__item--lang">
+        <div class="langswitch" role="group" aria-label="Language">
+          <button type="button" class="langswitch__btn is-active" data-lang="pt">PT</button>
+          <button type="button" class="langswitch__btn" data-lang="en">EN</button>
+        </div>
       </div>
     </nav>
 
@@ -92,7 +68,7 @@
   </div>
 </header>
 
-<main id="top">
+<main>
 
 <!-- ============ HERO ============ -->
 <section class="hero">
@@ -100,9 +76,7 @@
     <svg class="hero__grid" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#0b2239"/>
-          <stop offset="55%" stop-color="#0d3049"/>
-          <stop offset="100%" stop-color="#0a3d3a"/>
+          <stop offset="0%" stop-color="#0b2239"/><stop offset="55%" stop-color="#0d3049"/><stop offset="100%" stop-color="#0a3d3a"/>
         </linearGradient>
         <pattern id="hp" width="56" height="56" patternUnits="userSpaceOnUse">
           <path d="M56 0H0v56" fill="none" stroke="#7fd4c8" stroke-width=".5" opacity=".13"/>
@@ -111,445 +85,201 @@
       <rect width="1440" height="700" fill="url(#hg)"/>
       <rect width="1440" height="700" fill="url(#hp)"/>
       <g opacity=".18" stroke="#9fe3d6" fill="none" stroke-width="1.2">
-        <path d="M1040 700V330l90-70 90 70v370"/>
-        <path d="M1130 260V150M1075 700V420h110v280M1000 700l130-330 130 330"/>
+        <path d="M1040 700V330l90-70 90 70v370"/><path d="M1130 260V150M1075 700V420h110v280M1000 700l130-330 130 330"/>
         <circle cx="1130" cy="140" r="7" fill="#9fe3d6" stroke="none"/>
-      </g>
-      <g opacity=".1" stroke="#cbb27a" fill="none" stroke-width="1">
-        <path d="M120 700V470h140v230M190 470V380M60 700l130-260 130 260"/>
       </g>
     </svg>
   </div>
 
   <div class="container hero__inner">
-    <p class="hero__eyebrow" data-i18n="hero.eyebrow">Petróleo · Gás · Energia</p>
-    <h1 class="hero__title" data-i18n="hero.title">Conectando tecnologia global à energia do futuro</h1>
-    <p class="hero__lead" data-i18n="hero.lead">A ECO MIRAI TECHNOLOGY LTDA fornece equipamentos, serviços e soluções de engenharia de alta performance para a indústria de petróleo e gás no Brasil e na América Latina.</p>
+    <p class="hero__eyebrow" data-i18n="hero.eyebrow">Representação Comercial Internacional</p>
+    <h1 class="hero__title" data-i18n="hero.title">Conectando a força industrial da China às oportunidades estratégicas do Brasil</h1>
+    <p class="hero__lead" data-i18n="hero.lead">Representante oficial do Grupo KERUI, atuamos na prospecção, desenvolvimento e estruturação de negócios, oferecendo soluções industriais de alta tecnologia e acompanhamento estratégico para o setor de petróleo e gás.</p>
     <div class="hero__actions">
-      <a href="#sobre" class="btn btn--primary" data-i18n="hero.cta1">Conheça a empresa</a>
-      <a href="#contato" class="btn btn--ghost" data-i18n="hero.cta2">Fale com a Eco Mirai</a>
+      <a href="portfolio.html" class="btn btn--primary" data-i18n="hero.cta1">Ver o portfólio</a>
+      <a href="kerui.html" class="btn btn--ghost" data-i18n="hero.cta2">A parceria KERUI</a>
     </div>
   </div>
 
   <div class="hero__stats">
     <div class="container hero__stats-grid">
-      <div class="stat">
-        <span class="stat__value">5</span>
-        <span class="stat__label" data-i18n="hero.stat1">Áreas estratégicas de atuação</span>
-      </div>
-      <div class="stat">
-        <span class="stat__value">EPC</span>
-        <span class="stat__label" data-i18n="hero.stat2">Projetos turnkey de ponta a ponta</span>
-      </div>
-      <div class="stat">
-        <span class="stat__value">KERUI</span>
-        <span class="stat__label" data-i18n="hero.stat3">Parceria industrial estratégica</span>
-      </div>
-      <div class="stat">
-        <span class="stat__value">LATAM</span>
-        <span class="stat__label" data-i18n="hero.stat4">Atendimento em toda a América Latina</span>
-      </div>
+      <div class="stat"><span class="stat__value">2.400.000 m²</span><span class="stat__label" data-i18n="hero.stat1">Parque industrial KERUI</span></div>
+      <div class="stat"><span class="stat__value">+400</span><span class="stat__label" data-i18n="hero.stat2">Categorias de produtos em 9 séries</span></div>
+      <div class="stat"><span class="stat__value">52</span><span class="stat__label" data-i18n="hero.stat3">Países e regiões atendidos</span></div>
+      <div class="stat"><span class="stat__value">+700</span><span class="stat__label" data-i18n="hero.stat4">Conjuntos de fabricação e inspeção</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ SOBRE ============ -->
-<section class="section" id="sobre">
+<!-- ============ PILARES ============ -->
+<section class="section">
   <div class="container">
     <div class="sec-head">
-      <span class="sec-head__kicker" data-i18n="about.kicker">A Companhia</span>
-      <h2 class="sec-head__title" data-i18n="about.title">Sobre a Eco Mirai</h2>
+      <span class="sec-head__kicker" data-i18n="pillars.kicker">O que fazemos</span>
+      <h2 class="sec-head__title" data-i18n="pillars.title">Três frentes, uma ponte industrial</h2>
+      <p class="sec-head__lead" data-i18n="pillars.lead">A Eco Mirai nasceu com o propósito de aproximar grandes fabricantes globais das oportunidades existentes no mercado brasileiro.</p>
     </div>
 
-    <div class="about">
-      <div class="about__text">
-        <p class="lead" data-i18n="about.p1">A ECO MIRAI TECHNOLOGY LTDA, estabelecida em Manaus, Amazonas, nasce como uma empresa estratégica para atender o mercado brasileiro e latino-americano nos segmentos de petróleo, gás e energia.</p>
-        <p data-i18n="about.p2">Localizada no Edifício Atrium, em Manaus, a empresa atua como representante comercial, integradora de soluções e fornecedora de tecnologias avançadas para o setor de óleo e gás, conectando a experiência industrial global da KERUI GROUP às necessidades do mercado brasileiro.</p>
-        <p data-i18n="about.p3">Como associada à KERUI GROUP, uma das maiores fabricantes privadas e fornecedoras de equipamentos para petróleo e gás da China, a empresa reúne conhecimento técnico, inovação, experiência internacional e capacidade industrial para oferecer soluções completas ao mercado energético.</p>
-        <p data-i18n="about.p4">A Eco Mirai busca contribuir para o desenvolvimento do setor através da transferência de tecnologia, suporte técnico especializado, fabricação local e integração de soluções voltadas à eficiência e produtividade das operações petrolíferas.</p>
-      </div>
-
-      <aside class="about__card">
-        <h3 data-i18n="about.cardTitle">Identidade corporativa</h3>
-        <dl class="deflist">
-          <dt data-i18n="about.dt1">Razão social</dt>
-          <dd>ECO MIRAI TECHNOLOGY LTDA</dd>
-          <dt data-i18n="about.dt2">CNPJ</dt>
-          <dd>23.724.071/0001-32</dd>
-          <dt data-i18n="about.dt3">Sede</dt>
-          <dd data-i18n="about.dd3">Edifício Atrium — Manaus, AM, Brasil</dd>
-          <dt data-i18n="about.dt4">Setor</dt>
-          <dd data-i18n="about.dd4">Petróleo, gás e energia</dd>
-          <dt data-i18n="about.dt5">Cobertura</dt>
-          <dd data-i18n="about.dd5">Brasil e América Latina</dd>
-        </dl>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- ============ VISÃO / MISSÃO / VALORES ============ -->
-<section class="section section--alt" id="estrategia">
-  <div class="container">
-    <div class="sec-head">
-      <span class="sec-head__kicker" data-i18n="strategy.kicker">Direcionamento</span>
-      <h2 class="sec-head__title" data-i18n="strategy.title">Visão, Missão e Valores</h2>
-    </div>
-
-    <div class="vm">
-      <article class="vm__card">
-        <span class="vm__tag" data-i18n="strategy.visionTag">Nossa Visão</span>
-        <p data-i18n="strategy.vision">Ser reconhecida como referência na América Latina em tecnologia, engenharia e fornecimento de soluções integradas para a indústria de petróleo e gás.</p>
-      </article>
-      <article class="vm__card vm__card--accent">
-        <span class="vm__tag" data-i18n="strategy.missionTag">Nossa Missão</span>
-        <p data-i18n="strategy.mission">Fornecer equipamentos, tecnologias e serviços de engenharia com excelência, segurança e inovação, agregando valor aos clientes e contribuindo para o desenvolvimento sustentável do setor energético.</p>
-      </article>
-    </div>
-
-    <h3 class="sub-head" data-i18n="values.title">Nossos Valores</h3>
-    <div class="values">
-      <article class="value">
-        <div class="value__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3Z"/></svg>
-        </div>
-        <h4 data-i18n="values.v1t">Excelência</h4>
-        <p data-i18n="values.v1d">Compromisso permanente com a qualidade de produtos e serviços.</p>
-      </article>
-      <article class="value">
-        <div class="value__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 3.6 10.8c-.6.4-.9 1-.9 1.7v.5H9.3v-.5c0-.7-.3-1.3-.9-1.7A6 6 0 0 1 12 3Z"/></svg>
-        </div>
-        <h4 data-i18n="values.v2t">Inovação</h4>
-        <p data-i18n="values.v2d">Investimento contínuo em tecnologia, pesquisa e desenvolvimento.</p>
-      </article>
-      <article class="value">
-        <div class="value__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-3.5 7-9V5.5L12 3 5 5.5V12c0 5.5 7 9 7 9Z"/><path d="m9 12 2 2 4-4"/></svg>
-        </div>
-        <h4 data-i18n="values.v3t">Integridade</h4>
-        <p data-i18n="values.v3d">Atuação ética, transparente e responsável em todas as relações comerciais.</p>
-      </article>
-      <article class="value">
-        <div class="value__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c4.4 0 8-3.6 8-8V6.8L12 3 4 6.8V14c0 4.4 3.6 8 8 8Z"/><circle cx="12" cy="12" r="2.6"/></svg>
-        </div>
-        <h4 data-i18n="values.v4t">Segurança</h4>
-        <p data-i18n="values.v4d">Priorização da segurança das pessoas, operações e meio ambiente.</p>
-      </article>
-      <article class="value">
-        <div class="value__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c5-2.5 8-6.5 8-11a8 8 0 0 0-16 0c0 4.5 3 8.5 8 11Z"/><path d="M12 21V9M12 13l3.5-3.5M12 15l-3-3"/></svg>
-        </div>
-        <h4 data-i18n="values.v5t">Sustentabilidade</h4>
-        <p data-i18n="values.v5d">Busca constante por soluções que promovam eficiência energética e responsabilidade ambiental.</p>
-      </article>
-      <article class="value">
-        <div class="value__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8" fill="currentColor"/></svg>
-        </div>
-        <h4 data-i18n="values.v6t">Foco no Cliente</h4>
-        <p data-i18n="values.v6d">Compromisso com a satisfação e o sucesso dos nossos parceiros e clientes.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ÁREAS DE ATUAÇÃO ============ -->
-<section class="section" id="atuacao">
-  <div class="container">
-    <div class="sec-head">
-      <span class="sec-head__kicker" data-i18n="business.kicker">Negócios</span>
-      <h2 class="sec-head__title" data-i18n="business.title">Áreas de Atuação</h2>
-      <p class="sec-head__lead" data-i18n="business.lead">Cinco frentes integradas que cobrem o ciclo completo de tecnologia, equipamentos e engenharia para campos de petróleo e gás.</p>
-    </div>
-
-    <div class="areas">
+    <div class="areas areas--three">
       <article class="area">
         <span class="area__num">01</span>
-        <h3 data-i18n="business.a1t">Pesquisa e Desenvolvimento (P&amp;D)</h3>
-        <p data-i18n="business.a1d">Desenvolvimento de tecnologias e soluções avançadas para exploração, produção e operação de campos petrolíferos.</p>
+        <h3 data-i18n="pillars.p1t">Representação Comercial Internacional</h3>
+        <p data-i18n="pillars.p1d">Representação oficial do Grupo KERUI no Brasil, conectando a capacidade industrial chinesa a operadores e prestadores de serviço locais.</p>
       </article>
       <article class="area">
         <span class="area__num">02</span>
-        <h3 data-i18n="business.a2t">Fabricação de Equipamentos Petrolíferos</h3>
-        <p data-i18n="business.a2d">Fornecimento de equipamentos de alta performance para operações onshore e offshore, seguindo padrões internacionais de qualidade e segurança.</p>
+        <h3 data-i18n="pillars.p2t">Desenvolvimento de Negócios</h3>
+        <p data-i18n="pillars.p2d">Prospecção, desenvolvimento e estruturação de negócios, com acompanhamento estratégico do primeiro contato à entrega final.</p>
       </article>
       <article class="area">
         <span class="area__num">03</span>
-        <h3 data-i18n="business.a3t">Serviços Tecnológicos de Engenharia</h3>
-        <p data-i18n="business.a3d">Prestação de serviços especializados para otimização de processos, aumento da produtividade e eficiência operacional em campos de petróleo e gás.</p>
-      </article>
-      <article class="area">
-        <span class="area__num">04</span>
-        <h3 data-i18n="business.a4t">Contratos EPC Turnkey</h3>
-        <p data-i18n="business.a4d">Execução de projetos na modalidade EPC (Engineering, Procurement and Construction), oferecendo soluções completas desde a engenharia até a entrega final do empreendimento.</p>
-      </article>
-      <article class="area">
-        <span class="area__num">05</span>
-        <h3 data-i18n="business.a5t">Representação Comercial</h3>
-        <p data-i18n="business.a5d">Representação e comercialização de produtos, equipamentos e serviços de empresas líderes do setor de petróleo e gás, conectando tecnologias globais ao mercado brasileiro.</p>
+        <h3 data-i18n="pillars.p3t">Soluções Industriais</h3>
+        <p data-i18n="pillars.p3d">Equipamentos e pacotes de processo de alta tecnologia para exploração, produção, coleta, tratamento e transporte de petróleo e gás.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ SOLUÇÕES ============ -->
-<section class="section section--dark" id="solucoes">
-  <div class="container">
-    <div class="sec-head sec-head--light">
-      <span class="sec-head__kicker" data-i18n="solutions.kicker">Portfólio</span>
-      <h2 class="sec-head__title" data-i18n="solutions.title">Soluções e Serviços</h2>
-      <p class="sec-head__lead" data-i18n="solutions.lead">A Eco Mirai oferece suporte técnico especializado ao longo de toda a cadeia operacional de petróleo e gás.</p>
-    </div>
-
-    <ul class="sol-grid">
-      <li data-i18n="solutions.s1">Equipamentos para perfuração de poços</li>
-      <li data-i18n="solutions.s2">Equipamentos para produção de petróleo e gás</li>
-      <li data-i18n="solutions.s3">Sistemas de superfície</li>
-      <li data-i18n="solutions.s4">Soluções para intervenção em poços</li>
-      <li data-i18n="solutions.s5">Equipamentos para completação</li>
-      <li data-i18n="solutions.s6">Sistemas de automação e controle</li>
-      <li data-i18n="solutions.s7">Engenharia de campos petrolíferos</li>
-      <li data-i18n="solutions.s8">Serviços técnicos especializados</li>
-      <li data-i18n="solutions.s9">Gestão de projetos EPC</li>
-      <li data-i18n="solutions.s10">Suporte técnico e pós-venda</li>
-      <li data-i18n="solutions.s11">Consultoria tecnológica para o setor de energia</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ GALERIA ============ -->
-<section class="section" id="galeria">
+<!-- ============ LINHAS DE PRODUTO ============ -->
+<section class="section section--alt">
   <div class="container">
     <div class="sec-head">
-      <span class="sec-head__kicker" data-i18n="gallery.kicker">Registros</span>
-      <h2 class="sec-head__title" data-i18n="gallery.title">Galeria de Produtos e Instalações</h2>
-      <p class="sec-head__lead" data-i18n="gallery.lead">Equipamentos, operações e instalações da Eco Mirai. Clique em uma imagem para ampliar.</p>
+      <span class="sec-head__kicker" data-i18n="lines.kicker">Portfólio</span>
+      <h2 class="sec-head__title" data-i18n="lines.title">Quatro linhas de equipamentos</h2>
+      <p class="sec-head__lead" data-i18n="lines.lead">Da compressão de gás à geração de energia — soluções montadas em skid, prontas para campo, com engenharia, fabricação e comissionamento.</p>
     </div>
 
-    <!--
-      COMO TROCAR AS FOTOS  /  HOW TO REPLACE THE PHOTOS
-      1. Copie os arquivos de imagem para a pasta  assets/galeria/
-      2. Em cada <img> abaixo, troque o  src  pelo nome do arquivo
-         (ex.: src="assets/galeria/planta-manaus.jpg")
-      3. Ajuste as legendas em  js/i18n.js  nas chaves  gallery.cap1 ... gallery.cap6
-         — lembre-se de alterar nos DOIS idiomas (pt e en)
-      Para ter mais ou menos fotos, duplique ou remova um bloco <figure class="shot">
-      inteiro e crie/remova a chave correspondente no dicionário.
-      Recomendado: JPG ou WebP, 1600x1100 px, até ~400 KB por imagem.
-    -->
-    <div class="gallery">
-      <figure class="shot">
-        <button type="button" class="shot__btn">
-          <img src="assets/galeria/plataforma-offshore.jpg" alt="" data-i18n-alt="gallery.cap1" loading="lazy" decoding="async" width="1600" height="1100">
-        </button>
-        <figcaption data-i18n="gallery.cap1">Foto 1 — substituir pela imagem real</figcaption>
-      </figure>
-      <figure class="shot">
-        <button type="button" class="shot__btn">
-          <img src="assets/galeria/unidade-perfuracao.jpg" alt="" data-i18n-alt="gallery.cap2" loading="lazy" decoding="async" width="1600" height="1100">
-        </button>
-        <figcaption data-i18n="gallery.cap2">Foto 2 — substituir pela imagem real</figcaption>
-      </figure>
-      <figure class="shot">
-        <button type="button" class="shot__btn">
-          <img src="assets/galeria/estruturas-maritimas.jpg" alt="" data-i18n-alt="gallery.cap3" loading="lazy" decoding="async" width="1600" height="1100">
-        </button>
-        <figcaption data-i18n="gallery.cap3">Foto 3 — substituir pela imagem real</figcaption>
-      </figure>
-      <figure class="shot">
-        <button type="button" class="shot__btn">
-          <img src="assets/galeria/campo-producao-onshore.jpg" alt="" data-i18n-alt="gallery.cap4" loading="lazy" decoding="async" width="1600" height="1100">
-        </button>
-        <figcaption data-i18n="gallery.cap4">Foto 4 — substituir pela imagem real</figcaption>
-      </figure>
-      <figure class="shot">
-        <button type="button" class="shot__btn">
-          <img src="assets/galeria/sistemas-superficie.jpg" alt="" data-i18n-alt="gallery.cap5" loading="lazy" decoding="async" width="1600" height="1100">
-        </button>
-        <figcaption data-i18n="gallery.cap5">Foto 5 — substituir pela imagem real</figcaption>
-      </figure>
-      <figure class="shot">
-        <button type="button" class="shot__btn">
-          <img src="assets/galeria/planta-processamento.jpg" alt="" data-i18n-alt="gallery.cap6" loading="lazy" decoding="async" width="1600" height="1100">
-        </button>
-        <figcaption data-i18n="gallery.cap6">Foto 6 — substituir pela imagem real</figcaption>
-      </figure>
+    <div class="lines">
+      <a class="line" href="portfolio.html#compressores">
+        <span class="line__num">01</span>
+        <h3 data-i18n="lines.l1t">Pacotes de Compressores</h3>
+        <p data-i18n="lines.l1d">Compressores alternativos e de parafuso até 7.400 kW e 70 MPa. Parceiro estratégico da Ariel há mais de 12 anos.</p>
+        <span class="line__go" data-i18n="lines.more">Ver detalhes</span>
+      </a>
+      <a class="line" href="portfolio.html#gas">
+        <span class="line__num">02</span>
+        <h3 data-i18n="lines.l2t">Processamento de Gás Natural</h3>
+        <p data-i18n="lines.l2d">Separação, desacidificação, desidratação, recuperação de GLP e plantas modulares de GNL de até 10 MMSCFD.</p>
+        <span class="line__go" data-i18n="lines.more">Ver detalhes</span>
+      </a>
+      <a class="line" href="portfolio.html#nitrogenio">
+        <span class="line__num">03</span>
+        <h3 data-i18n="lines.l3t">Equipamentos de Nitrogênio</h3>
+        <p data-i18n="lines.l3d">Geração por membrana e PSA e bombeamento de nitrogênio líquido, com pureza de até 99,999% e pressões de até 15.000 psi.</p>
+        <span class="line__go" data-i18n="lines.more">Ver detalhes</span>
+      </a>
+      <a class="line" href="portfolio.html#geradores">
+        <span class="line__num">04</span>
+        <h3 data-i18n="lines.l4t">Geradores a Gás</h3>
+        <p data-i18n="lines.l4d">Série KGW com motor Waukesha: disponibilidade de até 98% e eficiência termoelétrica acima de 85%, inclusive com gás associado.</p>
+        <span class="line__go" data-i18n="lines.more">Ver detalhes</span>
+      </a>
     </div>
-
-    <p class="gallery__note" data-i18n="gallery.note">As imagens acima são provisórias e devem ser substituídas pelas fotos oficiais antes da publicação.</p>
   </div>
 </section>
 
 <!-- ============ PARCERIA KERUI ============ -->
-<section class="section" id="kerui">
+<section class="section section--dark">
   <div class="container">
     <div class="kerui">
       <div class="kerui__text">
         <span class="sec-head__kicker" data-i18n="kerui.kicker">Aliança Estratégica</span>
-        <h2 class="sec-head__title" data-i18n="kerui.title">Parceria Estratégica com a KERUI GROUP</h2>
-        <p data-i18n="kerui.p1">A ECO MIRAI TECHNOLOGY LTDA possui estreita colaboração com a KERUI GROUP, reconhecida globalmente por sua atuação no desenvolvimento, fabricação e fornecimento de equipamentos para a indústria de petróleo e gás.</p>
-        <p class="kerui__sub" data-i18n="kerui.p2">Esta parceria proporciona aos clientes brasileiros acesso a:</p>
+        <h2 class="sec-head__title" data-i18n="kerui.title">Representante oficial do Grupo KERUI</h2>
+        <p data-i18n="kerui.p1">A KERUI Petroleum &amp; Gas é focada em P&amp;D e na fabricação de equipamentos inteligentes de alto padrão para petróleo e gás, com um parque industrial que abrange toda a cadeia produtiva: exploração e desenvolvimento, coleta e transporte, e construção de obras.</p>
+        <p data-i18n="kerui.p2">Por meio da Eco Mirai, o mercado brasileiro acessa:</p>
         <ul class="checklist">
-          <li data-i18n="kerui.b1">Tecnologia de classe mundial</li>
-          <li data-i18n="kerui.b2">Equipamentos de alto desempenho</li>
-          <li data-i18n="kerui.b3">Expertise internacional</li>
-          <li data-i18n="kerui.b4">Soluções customizadas</li>
-          <li data-i18n="kerui.b5">Suporte técnico especializado</li>
-          <li data-i18n="kerui.b6">Transferência de conhecimento e tecnologia</li>
+          <li data-i18n="kerui.b1">Nove séries e mais de 400 categorias de produtos</li>
+          <li data-i18n="kerui.b2">Rede de serviços em 52 países e 12 centros regionais</li>
+          <li data-i18n="kerui.b3">10 centros de P&amp;D e laboratórios de pesquisa</li>
+          <li data-i18n="kerui.b4">Armazéns globais de peças de reposição</li>
+          <li data-i18n="kerui.b5">Soluções customizadas e montadas em skid</li>
+          <li data-i18n="kerui.b6">Transferência de conhecimento e suporte técnico</li>
         </ul>
+        <a href="kerui.html" class="btn btn--primary btn--inline" data-i18n="kerui.cta">Conhecer a KERUI</a>
       </div>
       <div class="kerui__panel">
         <div class="kerui__badge">KERUI GROUP</div>
-        <p data-i18n="kerui.panel">Uma das maiores fabricantes privadas e fornecedoras de equipamentos para petróleo e gás da China, com atuação industrial em escala global.</p>
+        <p data-i18n="kerui.panel">Um dos maiores fabricantes privados de equipamentos para petróleo e gás da China, com atuação industrial em escala global.</p>
         <div class="kerui__meta">
-          <div><strong data-i18n="kerui.m1v">Global</strong><span data-i18n="kerui.m1l">Capacidade industrial</span></div>
-          <div><strong data-i18n="kerui.m2v">Onshore &amp; Offshore</strong><span data-i18n="kerui.m2l">Cobertura operacional</span></div>
+          <div><strong>2.400.000 m²</strong><span data-i18n="kerui.m1l">Parque industrial</span></div>
+          <div><strong data-i18n="kerui.m2v">+20 países</strong><span data-i18n="kerui.m2l">Compressores entregues</span></div>
+          <div><strong data-i18n="kerui.m3v">Onshore &amp; Offshore</strong><span data-i18n="kerui.m3l">Cobertura operacional</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ COMPROMISSO + PRESENÇA ============ -->
-<section class="section section--alt" id="presenca">
+<!-- ============ CASOS ============ -->
+<section class="section">
   <div class="container">
     <div class="sec-head">
-      <span class="sec-head__kicker" data-i18n="commit.kicker">Mercado</span>
-      <h2 class="sec-head__title" data-i18n="commit.title">Compromisso com o mercado brasileiro</h2>
+      <span class="sec-head__kicker" data-i18n="cases.kicker">Referências</span>
+      <h2 class="sec-head__title" data-i18n="cases.title">Projetos executados no mundo</h2>
+      <p class="sec-head__lead" data-i18n="cases.lead">A KERUI já forneceu compressores para mais de 20 países. Alguns projetos que demonstram a escala e o padrão técnico do parceiro que representamos.</p>
     </div>
 
-    <div class="twocol">
-      <div>
-        <p data-i18n="commit.p1">A Eco Mirai está comprometida com o crescimento da indústria nacional de petróleo e gás, atuando conforme as exigências regulatórias, técnicas e ambientais do Brasil.</p>
-        <p data-i18n="commit.p2">Nosso objetivo é atender às expectativas dos clientes por meio da oferta de produtos confiáveis, serviços eficientes, entrega pontual e suporte pós-venda de excelência.</p>
-        <p data-i18n="commit.p3">A empresa busca desenvolver relacionamentos duradouros baseados na confiança, inovação e geração de resultados para seus parceiros.</p>
-      </div>
-      <div>
-        <h3 class="sub-head sub-head--tight" data-i18n="presence.title">Presença na América Latina</h3>
-        <p data-i18n="presence.p1">A partir de sua base operacional em Manaus, a ECO MIRAI TECHNOLOGY LTDA está estrategicamente posicionada para atender projetos em todo o Brasil e em países da América Latina, contribuindo para a modernização e competitividade do setor energético regional.</p>
-      </div>
-    </div>
-
-    <!--
-      MAPA DE ATUACAO
-      As formas usam longitude/latitude reais. O grupo tem scale(1,-1) porque no
-      SVG o eixo Y cresce para baixo e a latitude cresce para cima — assim as
-      coordenadas podem ser escritas na ordem natural (longitude, latitude).
-      O contorno e simplificado de proposito: e um mapa de referencia
-      institucional, nao uma carta geografica.
-
-      Para destacar um pais especifico quando a atuacao for confirmada, veja as
-      instrucoes no README (secao "Mapa de atuacao").
-    -->
-    <div class="presence">
-      <div class="presence__map">
-        <svg viewBox="-118 -33 84 89" role="img" aria-labelledby="mapTitle mapDesc">
-          <title id="mapTitle" data-i18n="map.title">Mapa de atuação da Eco Mirai na América Latina</title>
-          <desc id="mapDesc" data-i18n="map.desc">Mapa da América Latina com o Brasil destacado e a base operacional de Manaus assinalada.</desc>
-
-          <g transform="scale(1,-1)" vector-effect="non-scaling-stroke">
-            <!-- Mexico continental + America Central -->
-            <path class="map__land" d="M-114,32.5 -111,31.3 -108,31.3 -106,31.8 -103,29 -101,29.8 -99,27.5 -97.5,26 -97.7,22 -96,19.5 -94,18.2 -92,18.7 -91,18.7 -90,21 -88,21.5 -86.8,21.5 -86.8,20 -87.5,18.2 -88.3,15.9 -86,16 -84,15.9 -83.2,15 -83.5,13 -83,11.5 -82.5,9.5 -81,9 -79,9.3 -77.4,8.7 -78,7.2 -80,7.2 -81.5,7.8 -83,8.5 -85,10 -85.8,11 -87,12.8 -89,13.5 -91,14 -92.3,14.5 -94,16 -96,15.7 -98,16.5 -100,17 -102,18 -104,19 -105.7,20.5 -105.5,22 -106.5,23.8 -108.5,25.5 -109.5,27 -111,27.9 -112.5,29.5 -114,31.7 Z"/>
-            <!-- Baja California -->
-            <path class="map__land" d="M-114.5,32.5 -116.9,32.5 -116.5,31 -115,28.5 -114,27.5 -112.5,26 -111,25 -109.5,23.3 -109.5,24.5 -110.5,25.5 -112,27.5 -113.5,29.5 -114.5,31.5 Z"/>
-            <!-- America do Sul -->
-            <path class="map__land" d="M-77,8 -75,11 -71,12 -66,10.6 -62,10.5 -60,8.6 -58,6.8 -54,5.5 -51,4 -50,0 -44,-2.5 -38,-4 -35,-5.8 -34.8,-8 -37,-11 -39,-13 -39,-17.5 -40.5,-20.5 -44,-23 -48,-25.5 -48.5,-28 -52,-32 -56,-35 -57,-38 -62,-40 -65,-43 -65.5,-47 -68,-50 -68,-52.5 -70,-55 -74,-52 -75,-48 -73.5,-44 -73,-40 -73,-36 -71.5,-33 -70.5,-30 -70.4,-25 -70.5,-21 -71,-18 -75,-15 -77,-12 -79,-8 -81,-6 -80.5,-4 -80,-2 -79,1 -78,2.5 -77.5,4 -77.3,6 Z"/>
-            <!-- Brasil -->
-            <path class="map__brazil" d="M-51.5,4 -50,0.5 -48,-1 -44,-2.5 -38,-4 -35,-5.8 -34.8,-8 -37,-11 -39,-13 -39,-17.5 -40.5,-20.5 -41,-22 -44,-23 -48,-25.5 -48.5,-28 -50,-29.5 -52,-32 -53.5,-33.7 -55.6,-31 -57.6,-30.2 -56,-27 -54.6,-25.6 -54.3,-24 -57.6,-22.1 -58,-20 -58.4,-16.3 -60.2,-15.1 -62.6,-13 -65.4,-11 -70,-11 -72.9,-9.4 -73.8,-7.3 -70.9,-4.4 -70,-2 -69.4,-1.1 -69,1.7 -67,2.8 -64,2 -60.7,1.3 -60.7,5.2 -56,2 -55,2.5 Z"/>
-          </g>
-
-          <!-- Marcador de Manaus: fora do grupo espelhado, com a latitude negada -->
-          <g class="map__hq" transform="translate(-60.02, 3.1)">
-            <circle class="map__pulse" r="1.4"/>
-            <circle class="map__dot" r="0.85"/>
-            <text class="map__label" x="2.2" y="0.9" data-i18n="map.manaus">Manaus</text>
-          </g>
-        </svg>
-      </div>
-
-      <div class="presence__info">
-        <ul class="map-legend">
-          <li><span class="map-legend__key map-legend__key--hq"></span><span data-i18n="map.legendHq">Base operacional — Manaus, Amazonas</span></li>
-          <li><span class="map-legend__key map-legend__key--brazil"></span><span data-i18n="map.legendBrazil">Atuação em todo o território brasileiro</span></li>
-          <li><span class="map-legend__key map-legend__key--latam"></span><span data-i18n="map.legendLatam">Alcance para projetos na América Latina</span></li>
-        </ul>
-        <div class="presence-pills">
-          <span data-i18n="presence.pill1">Base operacional: Manaus (AM)</span>
-          <span data-i18n="presence.pill2">Cobertura nacional</span>
-          <span data-i18n="presence.pill3">Projetos na América Latina</span>
-        </div>
-        <p class="map__note" data-i18n="map.note">O mapa é ilustrativo e indica a região de alcance comercial da empresa, não operações confirmadas país a país.</p>
-      </div>
+    <div class="cases">
+      <article class="case">
+        <span class="case__place" data-i18n="cases.c1p">Iraque · 2022</span>
+        <h3 data-i18n="cases.c1t">BGC — 5 unidades compressoras</h3>
+        <p data-i18n="cases.c1d">Usuário final BGC, joint venture entre governo local, Shell e Mitsubishi. Todo o projeto em conformidade com a norma Shell, com monitoramento de vibração de toda a unidade.</p>
+      </article>
+      <article class="case">
+        <span class="case__place" data-i18n="cases.c2p">Uganda · 2023</span>
+        <h3 data-i18n="cases.c2t">TOTAL — pressurização de cabeça de poço</h3>
+        <p data-i18n="cases.c2d">Skids modulares intercambiáveis entre cabeças de poço, com todas as peças em contato com o gás em aço inoxidável para meios de alto teor de CO₂.</p>
+      </article>
+      <article class="case">
+        <span class="case__place" data-i18n="cases.c3p">Paquistão · EPCC</span>
+        <h3 data-i18n="cases.c3t">Planta de processamento de gás natural</h3>
+        <p data-i18n="cases.c3d">Capacidade de 250 MMSCFD e gás de venda de 225 MMSCFD, com 54 skids de unidades de processo — adoçamento, GLP, estabilização de condensado e medição.</p>
+      </article>
+      <article class="case">
+        <span class="case__place" data-i18n="cases.c4p">Turcomenistão · 2013</span>
+        <h3 data-i18n="cases.c4t">28 unidades compressoras</h3>
+        <p data-i18n="cases.c4d">Projeto compacto de grande volume, com resfriador a ar vertical montado em skid para facilitar transporte e instalação em campo.</p>
+      </article>
+      <article class="case case--latam">
+        <span class="case__place" data-i18n="cases.c5p">América Latina</span>
+        <h3 data-i18n="cases.c5t">Colômbia, Peru e Bolívia</h3>
+        <p data-i18n="cases.c5d">Coleta de gás e torre de refluxo para a Ecopetrol na Colômbia, unidades de geração de nitrogênio na Colômbia e no Peru, e projeto de compressores na Bolívia.</p>
+      </article>
+      <article class="case">
+        <span class="case__place" data-i18n="cases.c6p">Indonésia · 2014</span>
+        <h3 data-i18n="cases.c6t">CNOOC — plataforma offshore</h3>
+        <p data-i18n="cases.c6d">Compressor de parafuso dimensionado para plataforma offshore, com vedação por selo mecânico duplo e vazão de 4 MMSCFD.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTATO ============ -->
-<section class="section section--dark" id="contato">
+<!-- ============ CTA ============ -->
+<section class="section section--alt">
   <div class="container">
-    <div class="sec-head sec-head--light">
-      <span class="sec-head__kicker" data-i18n="contact.kicker">Fale Conosco</span>
-      <h2 class="sec-head__title" data-i18n="contact.title">Contato</h2>
-      <p class="sec-head__lead" data-i18n="contact.lead">Direcione sua mensagem ao departamento responsável para um atendimento mais ágil.</p>
-    </div>
-
-    <div class="contact">
-      <div class="contact__depts">
-        <a class="dept" href="mailto:diretoria@ecomirai.com.br">
-          <span class="dept__label" data-i18n="contact.d1">Diretor Geral</span>
-          <span class="dept__mail">diretoria@ecomirai.com.br</span>
-        </a>
-        <a class="dept" href="mailto:institucional@ecomirai.com.br">
-          <span class="dept__label" data-i18n="contact.d2">Institucional</span>
-          <span class="dept__mail">institucional@ecomirai.com.br</span>
-        </a>
-        <a class="dept" href="mailto:juridico@ecomirai.com.br">
-          <span class="dept__label" data-i18n="contact.d3">Jurídico</span>
-          <span class="dept__mail">juridico@ecomirai.com.br</span>
-        </a>
-        <a class="dept" href="mailto:administrativo@ecomirai.com.br">
-          <span class="dept__label" data-i18n="contact.d4">Administrativo</span>
-          <span class="dept__mail">administrativo@ecomirai.com.br</span>
-        </a>
-        <a class="dept" href="mailto:comercial@ecomirai.com.br">
-          <span class="dept__label" data-i18n="contact.d5">Comercial</span>
-          <span class="dept__mail">comercial@ecomirai.com.br</span>
-        </a>
+    <div class="cta">
+      <div>
+        <h2 class="cta__title" data-i18n="cta.title">Vamos avaliar o seu projeto</h2>
+        <p class="cta__lead" data-i18n="cta.lead">Fale com nossa equipe comercial para dimensionamento, especificação técnica e proposta.</p>
       </div>
-
-      <aside class="contact__info">
-        <h3 data-i18n="contact.infoTitle">ECO MIRAI TECHNOLOGY LTDA</h3>
-        <ul class="infolist">
-          <li><span data-i18n="contact.i1">CNPJ</span><strong>23.724.071/0001-32</strong></li>
-          <li><span data-i18n="contact.i2">Endereço</span><strong data-i18n="contact.i2v">Edifício Atrium — Manaus, Amazonas, Brasil</strong></li>
-          <li><span data-i18n="contact.i3">E-mail geral</span><strong>contato@ecomirai.com.br</strong></li>
-          <li><span data-i18n="contact.i4">Telefone</span><strong>+55 (92) XXXX-XXXX</strong></li>
-          <li><span data-i18n="contact.i5">Atendimento</span><strong data-i18n="contact.i5v">Brasil e América Latina</strong></li>
-        </ul>
-        <p class="contact__note" data-i18n="contact.note">Telefone e e-mails institucionais em processo de definição final.</p>
-      </aside>
+      <a href="contato.html" class="btn btn--primary" data-i18n="cta.btn">Falar com a Eco Mirai</a>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
       <strong>ECO MIRAI TECHNOLOGY LTDA</strong>
-      <p data-i18n="footer.slogan">"Conectando tecnologia global à energia do futuro."</p>
+      <p data-i18n="footer.slogan">"Conectando a força industrial da China às oportunidades estratégicas do Brasil."</p>
     </div>
     <nav class="footer__nav">
-      <a href="#sobre" data-i18n="nav.about">Sobre</a>
-      <a href="#atuacao" data-i18n="nav.business">Áreas de Atuação</a>
-      <a href="#solucoes" data-i18n="nav.solutions">Soluções</a>
-      <a href="#galeria" data-i18n="nav.gallery">Galeria</a>
-      <a href="#kerui" data-i18n="nav.partnership">Parceria KERUI</a>
-      <a href="#contato" data-i18n="nav.contact">Contato</a>
+      <a href="empresa.html" data-i18n="nav.about">Quem Somos</a>
+      <a href="portfolio.html" data-i18n="nav.portfolio">Portfólio</a>
+      <a href="kerui.html" data-i18n="nav.partnership">Parceria KERUI</a>
+      <a href="contato.html" data-i18n="nav.contact">Contato</a>
     </nav>
   </div>
   <div class="container footer__bottom">
@@ -557,23 +287,6 @@
     <span>CNPJ 23.724.071/0001-32 · Manaus — AM</span>
   </div>
 </footer>
-
-<!-- ============ LIGHTBOX DA GALERIA ============ -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxCaption" hidden>
-  <button type="button" class="lightbox__close" data-lb="close" aria-label="Fechar" data-i18n-aria="gallery.close">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
-  </button>
-  <button type="button" class="lightbox__nav lightbox__nav--prev" data-lb="prev" aria-label="Anterior" data-i18n-aria="gallery.prev">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
-  </button>
-  <figure class="lightbox__figure">
-    <img class="lightbox__img" id="lightboxImg" src="" alt="">
-    <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
-  </figure>
-  <button type="button" class="lightbox__nav lightbox__nav--next" data-lb="next" aria-label="Próxima" data-i18n-aria="gallery.next">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
-  </button>
-</div>
 
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
