@@ -839,6 +839,27 @@ body.is-locked{overflow:hidden}
 /* ---------- Destaque Ariel em petroleo ---------- */
 .highlight{background:linear-gradient(135deg,var(--navy-800) 0%,var(--teal-700) 100%)}
 
+/* ---------- Texto sobre superficies escuras ----------
+   A cor do texto passa a ser definida pelo FUNDO, e nao por uma classe
+   modificadora no proprio elemento (.sec-head--light). Sem isto, qualquer
+   componente pensado para fundo claro que caia numa secao escura renderiza
+   escuro sobre escuro — foi o que aconteceu com o bloco da KERUI na home. */
+.section--dark .sec-head__title,
+.pagehead--dark .sec-head__title{color:#fff}
+
+.section--dark .sec-head__kicker,
+.pagehead--dark .sec-head__kicker{color:var(--teal-300)}
+
+.section--dark .sec-head__lead,
+.section--dark .lead,
+.section--dark .kerui__text p,
+.section--dark .checklist li,
+.pagehead--dark .sec-head__lead{color:#c6d5e0}
+
+/* Marcador da lista tambem precisa clarear para aparecer no escuro */
+.section--dark .checklist li::before{background:rgba(127,212,200,.18)}
+.section--dark .checklist li::after{border-color:var(--teal-300)}
+
 /* ---------- Cartao da missao acompanha o mesmo degrade ---------- */
 .vm__card--accent{
   background:linear-gradient(135deg,var(--navy-800) 0%,var(--teal-700) 100%);
