@@ -1,26 +1,29 @@
 # ECO MIRAI TECHNOLOGY — Site institucional
 
-Site institucional estático e bilíngue (português / inglês) da ECO MIRAI TECHNOLOGY LTDA.
+Site institucional estático e bilíngue (português / inglês) da ECO MIRAI TECHNOLOGY LTDA, representante comercial do Grupo KERUI no Brasil.
 
 ## Estrutura
 
 ```
-eco-mirai/
-├── index.html          Página única com todas as seções
-├── css/styles.css      Estilos e responsividade
+├── index.html          Home — posicionamento, números e chamadas
+├── empresa.html        Quem Somos, Missão e Valores, Presença (mapa)
+├── portfolio.html      Quatro linhas de equipamentos + Galeria
+├── kerui.html          Parceria KERUI — escala, fábrica e casos
+├── contato.html        Departamentos e dados corporativos
+├── css/styles.css      Estilos, cores e responsividade
 ├── js/i18n.js          Dicionário de traduções PT/EN
-├── js/main.js          Troca de idioma, menu mobile, animações, galeria
+├── js/main.js          Idioma, menus, galeria e animações
 ├── assets/favicon.svg  Ícone do site
-├── assets/galeria/     Fotos da seção Galeria
-├── server.js           Servidor local para desenvolvimento (Node)
+├── assets/galeria/     Fotos de produtos
+├── server.js           Servidor local de desenvolvimento (Node)
 └── .claude/            Config de desenvolvimento + servidor alternativo em Perl
 ```
 
+O site é multipágina: cada página é um HTML independente que compartilha o mesmo CSS e JS. Não há build nem dependências externas.
+
 ## Como visualizar
 
-Basta abrir `index.html` em qualquer navegador — o site não depende de build nem de dependências externas.
-
-Para servir por HTTP local (recomendado ao testar):
+Para servir por HTTP local:
 
 ```
 node server.js
@@ -28,30 +31,33 @@ node server.js
 
 Depois acesse `http://localhost:4321`.
 
-**Sem Node instalado?** Esta máquina não tem Node nem Python, então há uma alternativa em Perl (que já vem com o Git for Windows), com o mesmo resultado:
+Se o Node não estiver disponível, há uma alternativa em Perl (que já vem com o Git for Windows), com o mesmo resultado:
 
 ```
 perl .claude/dev-server.pl
 ```
 
-Os dois servem a mesma pasta na porta 4321 — use o que estiver disponível. Ambos são só para desenvolvimento e não vão para produção.
+Ambos servem a mesma pasta na porta 4321 e são apenas para desenvolvimento.
 
-> Vale servir por HTTP em vez de abrir o `index.html` direto do disco: em `file://`
-> o navegador trata cada arquivo como origem isolada, o que pode bloquear o
-> `localStorage` (a memória do idioma escolhido) dependendo do navegador.
+> Prefira servir por HTTP em vez de abrir o HTML direto do disco: em `file://` o
+> navegador trata cada arquivo como origem isolada, o que pode bloquear o
+> `localStorage` (a memória do idioma escolhido) e impede o carregamento do CSS
+> e do JS em alguns navegadores.
 
 ## Publicação
 
-Por ser 100% estático, o site pode ser hospedado em qualquer serviço de arquivos estáticos (hospedagem tradicional, Netlify, Vercel, GitHub Pages, S3). Envie o conteúdo da pasta `eco-mirai/` para a raiz do domínio.
+Por ser 100% estático, o site roda em qualquer hospedagem de arquivos (hospedagem tradicional, Netlify, Vercel, GitHub Pages, S3). Envie os arquivos da raiz do projeto para a raiz do domínio.
 
-**Não envie para produção:** `server.js`, `README.md` e a pasta `.claude/` — são apenas de desenvolvimento e ficariam publicamente acessíveis.
+**Não envie para produção:** `server.js`, `README.md` e a pasta `.claude/`.
+
+**Antes de publicar, remova a linha `<meta name="robots" content="noindex, nofollow">`** que está no `<head>` das cinco páginas. Ela existe para impedir que buscadores indexem a versão de preview, que ainda tem contatos provisórios.
 
 ### Cabeçalhos de segurança recomendados
 
-O `index.html` já traz uma `Content-Security-Policy` via `<meta>`, que cobre a maior parte do risco. Alguns cabeçalhos só funcionam via HTTP e devem ser configurados na hospedagem:
+As páginas já trazem uma `Content-Security-Policy` via `<meta>`. Alguns cabeçalhos só funcionam via HTTP e devem ser configurados na hospedagem:
 
 ```
-Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
 X-Content-Type-Options: nosniff
 Referrer-Policy: strict-origin-when-cross-origin
 Strict-Transport-Security: max-age=31536000; includeSubDomains
@@ -61,36 +67,35 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 ## Idiomas
 
-A troca PT/EN acontece no canto superior direito, sem recarregar a página. O idioma escolhido fica salvo no navegador (`localStorage`); na primeira visita, o site adota o idioma do navegador do visitante.
+A troca PT/EN fica no cabeçalho, à direita, e acontece sem recarregar a página. O idioma escolhido é salvo no navegador (`localStorage`) e **persiste ao navegar entre as páginas**; na primeira visita, o site adota o idioma do navegador do visitante. Se o `localStorage` estiver bloqueado, a troca continua funcionando — apenas não é lembrada.
 
-Todo texto visível é controlado por `js/i18n.js`. Para editar um conteúdo, localize a chave correspondente (por exemplo `hero.title`) e altere o texto **nos dois idiomas**. O atributo `data-i18n` no HTML indica qual chave alimenta cada elemento.
+Todo texto visível é controlado por `js/i18n.js`. Para editar um conteúdo, localize a chave (por exemplo `hero.title`) e altere o texto **nos dois idiomas**. No HTML:
+
+- `data-i18n` alimenta o texto do elemento;
+- `data-i18n-alt` alimenta o `alt` de imagens;
+- `data-i18n-aria` alimenta o `aria-label` de botões.
+
+Cada página declara `<body data-page="…">`, e o dicionário usa esse valor para definir o `<title>` e a `description` por página (chaves `meta.<pagina>.title` e `meta.<pagina>.desc`).
 
 ## Galeria de fotos
 
-A seção **Galeria** (`#galeria`) exibe fotos de produtos, equipamentos e instalações, com ampliação em tela cheia ao clicar (setas do teclado navegam, `Esc` fecha).
+A galeria fica em `portfolio.html` (`#galeria`) e exibe **nove fotos de produtos KERUI**, com ampliação em tela cheia ao clicar (setas do teclado navegam, `Esc` fecha, o foco fica preso no diálogo enquanto aberto).
 
-> **As seis fotos atuais são de banco de imagens (Unsplash), não são da Eco Mirai.**
-> Foram colocadas apenas para dar acabamento profissional à apresentação. A
-> [licença do Unsplash](https://unsplash.com/license) permite uso comercial sem
-> atribuição, mas **imagens genéricas de banco não devem representar instalações
-> próprias em material institucional** — troque por fotos reais da empresa antes
-> de publicar. Os arquivos são todos locais (`assets/galeria/`); o site não
-> depende de nenhum servidor externo.
+As imagens foram extraídas da apresentação técnica oficial da KERUI e mostram equipamentos reais: compressores, vaso de pressão, unidades de nitrogênio e unidade de perfuração a ar. O aviso ao pé da galeria (`gallery.note`) atribui o material à KERUI — **mantenha essa atribuição** enquanto as fotos forem do fabricante parceiro.
 
-Para colocar as fotos reais:
+Para trocar ou acrescentar fotos:
 
-1. Copie os arquivos de imagem para `assets/galeria/`.
-2. Em `index.html`, na seção `#galeria`, troque o `src` de cada `<img>` pelo nome do arquivo — por exemplo `src="assets/galeria/planta-manaus.jpg"`.
-3. Em `js/i18n.js`, ajuste as legendas nas chaves `gallery.cap1` a `gallery.cap6`, **nos dois idiomas**.
-4. Remova o parágrafo de aviso (`gallery.note`) quando todas as fotos definitivas estiverem no lugar.
+1. Copie os arquivos para `assets/galeria/`.
+2. Em `portfolio.html`, na seção `#galeria`, ajuste o `src` e o `alt` de cada `<img>`.
+3. Em `js/i18n.js`, ajuste as legendas nas chaves `gallery.cap1` a `gallery.cap9`, **nos dois idiomas**.
 
-Para ter mais ou menos de seis fotos, duplique ou remova um bloco `<figure class="shot">` inteiro e crie/remova a chave correspondente no dicionário.
+Para ter mais ou menos de nove fotos, duplique ou remova um bloco `<figure class="shot">` inteiro e crie/remova a chave correspondente no dicionário.
 
-Formato recomendado: JPG ou WebP, cerca de 1600×1100 px, até ~400 KB por imagem. As fotos são recortadas na proporção 16:11 na grade, mas aparecem inteiras na ampliação.
+Formato recomendado: JPG ou WebP, cerca de 1600×1100 px, até ~400 KB por imagem. As fotos são recortadas na proporção 16:11 na grade, mas aparecem inteiras na ampliação (limitadas a 74% da altura da tela).
 
 ## Mapa de atuação
 
-O mapa da seção **Presença** (`#presenca`) é um SVG desenhado à mão, sem biblioteca nem imagem externa. As formas usam **longitude e latitude reais**: o grupo tem `transform="scale(1,-1)"` porque no SVG o eixo Y cresce para baixo enquanto a latitude cresce para cima. Na prática, você escreve as coordenadas na ordem natural `longitude,latitude`.
+O mapa da seção **Presença** (`empresa.html#presenca`) é um SVG desenhado à mão, sem biblioteca nem imagem externa. As formas usam **longitude e latitude reais**: o grupo tem `transform="scale(1,-1)"` porque no SVG o eixo Y cresce para baixo enquanto a latitude cresce para cima. Na prática, você escreve as coordenadas na ordem natural `longitude,latitude`.
 
 O `viewBox="-118 -33 84 89"` cobre da Baixa Califórnia (–118°) ao litoral leste do Brasil (–34°), e do norte do México (33°) à Terra do Fogo (–56°).
 
@@ -104,17 +109,23 @@ O `viewBox="-118 -33 84 89"` cobre da Baixa Califórnia (–118°) ao litoral le
 
 > Atenção ao `transform-box: fill-box` na regra `.map__pulse`. Sem ele, o padrão do SVG (`view-box`) faz o `transform-origin: center` apontar para o centro do viewBox, e o anel pulsante aparece longe do marcador.
 
-O contorno é simplificado de propósito — é um mapa de referência institucional, não uma carta geográfica. O texto sob o mapa deixa claro que ele indica alcance comercial, não operações confirmadas país a país.
+O contorno é simplificado de propósito — é um mapa de referência institucional, não uma carta geográfica.
+
+## Atribuição do conteúdo KERUI
+
+Os números, capacidades industriais, especificações técnicas e casos de sucesso apresentados no Portfólio e na página da Parceria pertencem ao **Grupo KERUI**, fabricante parceiro. A página `kerui.html` traz um aviso explícito nesse sentido, e o texto de abertura deixa claro que a Eco Mirai é a representante comercial.
+
+Essa separação é intencional: ela preserva a força comercial do argumento ("representamos quem tem essa estrutura") sem atribuir à Eco Mirai uma planta industrial que não é dela.
 
 ## Pendências de conteúdo
 
-Os itens abaixo foram inseridos como provisórios e precisam ser confirmados antes da publicação:
+Os itens abaixo são provisórios e precisam ser confirmados antes da publicação:
 
-- **Telefone:** `+55 (92) XXXX-XXXX` — a definir.
-- **E-mails departamentais:** `diretoria@`, `institucional@`, `juridico@`, `administrativo@` e `comercial@ecomirai.com.br` — sugeridos com base nas prioridades informadas; confirmar com o provedor de e-mail.
+- **Telefone:** `+55 (92) XXXX-XXXX` — a definir. A própria apresentação da Eco Mirai trazia o número zerado.
+- **E-mails departamentais:** `diretoria@`, `institucional@`, `juridico@`, `administrativo@` e `comercial@ecomirai.com.br` — sugeridos a partir das prioridades informadas; confirmar com o provedor de e-mail.
 - **E-mail geral:** `contato@ecomirai.com.br` — informado como exemplo.
-- **Endereço:** consta apenas "Edifício Atrium, Manaus – AM"; recomenda-se complementar com rua, número, sala e CEP.
+- **Endereço:** consta apenas "Manaus — Amazonas, Brasil". A apresentação oficial trazia "Rua Lorem Ipsum, nº 123" (texto de espaço reservado), então o endereço completo ainda precisa ser fornecido.
 - **Logotipo:** a marca no cabeçalho usa um símbolo em SVG criado como espaço reservado. Substitua por um arquivo oficial quando disponível.
-- **Fotos da galeria:** as seis imagens são de banco de imagens e ilustram apenas o setor. Substitua pelas fotos oficiais da empresa conforme a seção "Galeria de fotos" acima. O arquivo `assets/galeria/placeholder.svg` continua disponível caso queira adicionar novos espaços antes de ter a foto.
+- **Linha de geradores a gás:** é a única das quatro linhas sem foto de produto na galeria — não havia imagem identificável com segurança no material recebido.
 
-Para trocar telefone e e-mails, edite os valores em `index.html` (seção `#contato`) e as chaves correspondentes em `js/i18n.js`.
+Para trocar telefone e e-mails, edite os valores em `contato.html` e as chaves correspondentes em `js/i18n.js`.
