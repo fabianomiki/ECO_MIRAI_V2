@@ -73,22 +73,130 @@
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero__bg" aria-hidden="true">
-    <svg class="hero__grid" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#0b2239"/><stop offset="55%" stop-color="#0d3049"/><stop offset="100%" stop-color="#0a3d3a"/>
-        </linearGradient>
-        <pattern id="hp" width="56" height="56" patternUnits="userSpaceOnUse">
-          <path d="M56 0H0v56" fill="none" stroke="#7fd4c8" stroke-width=".5" opacity=".13"/>
-        </pattern>
-      </defs>
-      <rect width="1440" height="700" fill="url(#hg)"/>
-      <rect width="1440" height="700" fill="url(#hp)"/>
-      <g opacity=".18" stroke="#9fe3d6" fill="none" stroke-width="1.2">
-        <path d="M1040 700V330l90-70 90 70v370"/><path d="M1130 260V150M1075 700V420h110v280M1000 700l130-330 130 330"/>
-        <circle cx="1130" cy="140" r="7" fill="#9fe3d6" stroke="none"/>
-      </g>
-    </svg>
+
+    <!-- CENA 1 — Amazônia & conexões (o hub) -->
+    <div class="hero__slide is-active">
+      <svg class="hero__grid" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0b2239"/><stop offset="52%" stop-color="#0d3346"/><stop offset="100%" stop-color="#0a4842"/>
+          </linearGradient>
+          <pattern id="hp1" width="56" height="56" patternUnits="userSpaceOnUse">
+            <path d="M56 0H0v56" fill="none" stroke="#7fd4c8" stroke-width=".5" opacity=".1"/>
+          </pattern>
+        </defs>
+        <rect width="1440" height="700" fill="url(#hg1)"/>
+        <rect width="1440" height="700" fill="url(#hp1)"/>
+        <g fill="#7fd4c8" opacity=".14">
+          <circle cx="820" cy="90" r="2"/><circle cx="910" cy="150" r="1.5"/><circle cx="1010" cy="70" r="2.5"/>
+          <circle cx="1120" cy="130" r="1.5"/><circle cx="1240" cy="90" r="2"/><circle cx="1360" cy="150" r="1.5"/>
+          <circle cx="1300" cy="230" r="2"/><circle cx="880" cy="230" r="1.5"/><circle cx="770" cy="170" r="2"/>
+        </g>
+        <g fill="none" stroke="#9fe3d6" stroke-width="2.2" opacity=".5" stroke-linecap="round">
+          <path d="M1440,80 C1300,210 1170,235 1075,355 C995,455 975,565 900,700"/>
+          <path d="M1440,300 C1330,375 1275,470 1210,700"/>
+        </g>
+        <g fill="none" stroke="#9fe3d6" stroke-width="1.4" opacity=".38" stroke-linecap="round">
+          <path d="M1150,300 C1225,340 1290,356 1400,352"/>
+          <path d="M1030,415 C975,465 890,478 815,520"/>
+          <path d="M1285,468 C1345,505 1400,532 1440,548"/>
+          <path d="M1075,355 C1120,300 1140,250 1150,300"/>
+        </g>
+        <g stroke="#4fb3a4" stroke-width="1" opacity=".5">
+          <path d="M1150,300 L1085,235 M1150,300 L1230,250 M1150,300 L1215,370"/>
+          <path d="M1030,415 L965,360 M1030,415 L1095,470 M1030,415 L960,470"/>
+          <path d="M1285,468 L1350,415 M1285,468 L1235,530"/>
+        </g>
+        <g fill="#9fe3d6">
+          <circle cx="1150" cy="300" r="5.5"/><circle cx="1030" cy="415" r="5"/><circle cx="1285" cy="468" r="4.5"/>
+        </g>
+        <g fill="#c2a25c">
+          <circle cx="1085" cy="235" r="3"/><circle cx="1230" cy="250" r="3"/><circle cx="965" cy="360" r="3"/>
+          <circle cx="1350" cy="415" r="3"/><circle cx="960" cy="470" r="2.5"/><circle cx="1215" cy="370" r="2.5"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- CENA 2 — Petróleo & gás / KERUI -->
+    <div class="hero__slide">
+      <svg class="hero__grid" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="hg2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0a1f33"/><stop offset="55%" stop-color="#0d2c43"/><stop offset="100%" stop-color="#0a4038"/>
+          </linearGradient>
+          <pattern id="hp2" width="56" height="56" patternUnits="userSpaceOnUse">
+            <path d="M56 0H0v56" fill="none" stroke="#7fd4c8" stroke-width=".5" opacity=".1"/>
+          </pattern>
+        </defs>
+        <rect width="1440" height="700" fill="url(#hg2)"/>
+        <rect width="1440" height="700" fill="url(#hp2)"/>
+        <g fill="none" stroke="#9fe3d6" stroke-width="1.6" opacity=".5" stroke-linejoin="round">
+          <path d="M1120,700 L1165,250 M1230,700 L1185,250"/>
+          <path d="M1140,520 L1210,520 M1148,430 L1202,430 M1156,350 L1194,350 M1132,610 L1218,610"/>
+          <path d="M1120,700 L1210,520 M1230,700 L1140,520 M1140,520 L1202,430 M1210,520 L1148,430 M1148,430 L1194,350 M1202,430 L1156,350"/>
+          <path d="M1165,250 L1185,250 L1180,215 L1170,215 Z M1175,215 V180"/>
+          <circle cx="1175" cy="172" r="6" fill="#9fe3d6" stroke="none" opacity=".9"/>
+        </g>
+        <g fill="none" stroke="#9fe3d6" stroke-width="1.5" opacity=".42">
+          <path d="M1290,700 V560 a44,14 0 0 1 88,0 V700"/>
+          <ellipse cx="1334" cy="560" rx="44" ry="14"/>
+          <path d="M1300,555 h68"/>
+        </g>
+        <g fill="none" stroke="#9fe3d6" stroke-width="1.5" opacity=".3">
+          <path d="M1388,700 V600 a30,10 0 0 1 60,0 V700"/>
+          <ellipse cx="1418" cy="600" rx="30" ry="10"/>
+        </g>
+        <g fill="none" stroke="#7fd4c8" stroke-width="1.4" opacity=".34">
+          <rect x="770" y="612" width="120" height="60" rx="3"/>
+          <path d="M792,612 v-16 h30 v16 M840,612 v-24 h34 v24"/>
+          <rect x="915" y="628" width="96" height="44" rx="3"/>
+          <circle cx="963" cy="650" r="12"/>
+        </g>
+        <g fill="none" stroke="#4fb3a4" stroke-width="2" opacity=".4">
+          <path d="M0,662 H1290 M1055,662 V612"/>
+        </g>
+        <g fill="none" stroke="#c2a25c" stroke-width="2" opacity=".55" stroke-linecap="round" stroke-dasharray="2 26">
+          <path d="M0,662 H1055 V612"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- CENA 3 — Posicionamento estratégico / gerar negócios -->
+    <div class="hero__slide">
+      <svg class="hero__grid" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="hg3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0b2239"/><stop offset="52%" stop-color="#0d3147"/><stop offset="100%" stop-color="#0a453f"/>
+          </linearGradient>
+          <pattern id="hp3" width="56" height="56" patternUnits="userSpaceOnUse">
+            <path d="M56 0H0v56" fill="none" stroke="#7fd4c8" stroke-width=".5" opacity=".1"/>
+          </pattern>
+        </defs>
+        <rect width="1440" height="700" fill="url(#hg3)"/>
+        <rect width="1440" height="700" fill="url(#hp3)"/>
+        <g opacity=".9">
+          <path d="M1205,150 C1285,165 1338,225 1345,310 C1350,378 1372,415 1368,478 C1362,565 1300,672 1246,668 C1206,665 1198,602 1178,562 C1150,505 1120,472 1122,410 C1124,342 1132,255 1152,208 C1163,180 1188,150 1205,150 Z"
+                fill="#4fb3a4" opacity=".14" stroke="#9fe3d6" stroke-width="1.4"/>
+        </g>
+        <g fill="none" stroke="#7fd4c8" stroke-width="1.5" opacity=".4">
+          <circle cx="560" cy="250" r="30"/><circle cx="560" cy="250" r="16"/>
+          <path d="M560,205 V150 M560,295 V350 M515,250 H470 M605,250 H650"/>
+        </g>
+        <circle cx="560" cy="250" r="4" fill="#9fe3d6"/>
+        <g fill="none" stroke-linecap="round">
+          <path d="M588,232 C760,120 1050,150 1212,318" stroke="#9fe3d6" stroke-width="2" opacity=".5"/>
+          <path d="M582,272 C740,300 980,360 1200,398" stroke="#c2a25c" stroke-width="2" opacity=".55"/>
+          <path d="M566,282 C700,470 980,520 1210,486" stroke="#9fe3d6" stroke-width="1.6" opacity=".34"/>
+        </g>
+        <g fill="#c2a25c">
+          <circle cx="760" cy="313" r="3"/><circle cx="900" cy="342" r="3.2"/><circle cx="1050" cy="372" r="3"/>
+        </g>
+        <circle cx="1212" cy="318" r="15" fill="none" stroke="#c2a25c" stroke-width="1.2" opacity=".5"/>
+        <circle cx="1212" cy="318" r="6.5" fill="#c2a25c"/>
+        <circle cx="1212" cy="318" r="2.5" fill="#0b2239"/>
+      </svg>
+    </div>
+
   </div>
 
   <div class="container hero__inner">
@@ -101,6 +209,7 @@
     </div>
   </div>
 
+  <!-- Indicadores: na base do MESMO hero, sobre a zona escura (sem emenda) -->
   <div class="hero__stats">
     <div class="container hero__stats-grid">
       <div class="stat"><span class="stat__value">2.400.000 m²</span><span class="stat__label" data-i18n="hero.stat1">Parque industrial KERUI</span></div>
@@ -287,6 +396,29 @@
     <span>CNPJ 23.724.071/0001-32 · Manaus — AM</span>
   </div>
 </footer>
+
+<!-- ============ BOTÕES FLUTUANTES (WhatsApp + SAC/FAQ) ============ -->
+<!-- ATENCAO: o numero do WhatsApp abaixo (5592000000000) e PROVISORIO.
+     Substituir pelo numero real (formato: 55 + DDD + numero, so digitos)
+     antes de publicar. Ver README. -->
+<div class="fab">
+  <a class="fab__btn fab__btn--sac" href="mailto:sac@ecomirai.com.br?subject=SAC%20%2F%20FAQ%20%E2%80%94%20ECO%20MIRAI"
+     data-i18n-aria="fab.sac" data-i18n-title="fab.sac" aria-label="SAC / FAQ por e-mail" title="SAC / FAQ por e-mail">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M5 12a7 7 0 0 1 14 0"/>
+      <path d="M4 13.5a1.5 1.5 0 0 1 1.5-1.5H7v5H5.5A1.5 1.5 0 0 1 4 15.5Z"/>
+      <path d="M20 13.5a1.5 1.5 0 0 0-1.5-1.5H17v5h1.5a1.5 1.5 0 0 0 1.5-1.5Z"/>
+      <path d="M19 17v.5a3 3 0 0 1-3 3h-2"/>
+    </svg>
+  </a>
+  <a class="fab__btn fab__btn--wa" href="https://wa.me/5592000000000" target="_blank" rel="noopener"
+     data-i18n-aria="fab.whatsapp" data-i18n-title="fab.whatsapp" aria-label="Fale pelo WhatsApp" title="Fale pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.06-1.33A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.1.81.83-3.02-.2-.31A8.2 8.2 0 1 1 12 20.2Z"/>
+      <path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+    </svg>
+  </a>
+</div>
 
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>

@@ -451,7 +451,11 @@ window.ECOMIRAI_I18N = {
 
     /* ---- rodape ---- */
     "footer.slogan": "\"Conectando a força industrial da China às oportunidades estratégicas do Brasil.\"",
-    "footer.rights": "© 2026 ECO MIRAI TECHNOLOGY LTDA. Todos os direitos reservados."
+    "footer.rights": "© 2026 ECO MIRAI TECHNOLOGY LTDA. Todos os direitos reservados.",
+
+    /* ---- botoes flutuantes ---- */
+    "fab.whatsapp": "Fale com o comercial pelo WhatsApp",
+    "fab.sac": "SAC / FAQ — atendimento por e-mail"
   },
 
   en: {
@@ -902,6 +906,10 @@ window.ECOMIRAI_I18N = {
 
     /* ---- footer ---- */
     "footer.slogan": "\"Connecting China's industrial strength to Brazil's strategic opportunities.\"",
-    "footer.rights": "© 2026 ECO MIRAI TECHNOLOGY LTDA. All rights reserved."
+    "footer.rights": "© 2026 ECO MIRAI TECHNOLOGY LTDA. All rights reserved.",
+
+    /* ---- floating buttons ---- */
+    "fab.whatsapp": "Talk to sales on WhatsApp",
+    "fab.sac": "Customer service / FAQ — by e-mail"
   }
 };

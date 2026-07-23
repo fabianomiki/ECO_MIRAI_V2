@@ -15,8 +15,8 @@
       if (value !== undefined) el.textContent = value;
     });
 
-    /* Textos que vivem em atributos (alt de imagem, aria-label de botão) */
-    [["data-i18n-alt", "alt"], ["data-i18n-aria", "aria-label"]].forEach(function (pair) {
+    /* Textos que vivem em atributos (alt de imagem, aria-label/title de botão) */
+    [["data-i18n-alt", "alt"], ["data-i18n-aria", "aria-label"], ["data-i18n-title", "title"]].forEach(function (pair) {
       document.querySelectorAll("[" + pair[0] + "]").forEach(function (el) {
         var value = table[el.getAttribute(pair[0])];
         if (value !== undefined) el.setAttribute(pair[1], value);
@@ -135,6 +135,29 @@
 
     /* Ao cruzar o breakpoint, o estado do menu anterior nao faz mais sentido */
     window.addEventListener("resize", function () { closeGroups(null); });
+  }
+
+  /* ---------- Hero: carrossel de fundos ---------- */
+  var slides = Array.prototype.slice.call(document.querySelectorAll(".hero__slide"));
+  var reduzMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (slides.length > 1 && !reduzMovimento) {
+    var atual = 0;
+    var pausado = false;
+    var heroEl = document.querySelector(".hero");
+
+    /* Pausa quando o ponteiro esta sobre o hero (nao troca embaixo do leitor) */
+    if (heroEl) {
+      heroEl.addEventListener("mouseenter", function () { pausado = true; });
+      heroEl.addEventListener("mouseleave", function () { pausado = false; });
+    }
+
+    window.setInterval(function () {
+      if (pausado || document.hidden) return;
+      slides[atual].classList.remove("is-active");
+      atual = (atual + 1) % slides.length;
+      slides[atual].classList.add("is-active");
+    }, 6000);
   }
 
   /* ---------- Header shadow on scroll ---------- */

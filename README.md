@@ -93,6 +93,23 @@ Para ter mais ou menos de nove fotos, duplique ou remova um bloco `<figure class
 
 Formato recomendado: JPG ou WebP, cerca de 1600×1100 px, até ~400 KB por imagem. As fotos são recortadas na proporção 16:11 na grade, mas aparecem inteiras na ampliação (limitadas a 74% da altura da tela).
 
+## Hero da home (carrossel de fundos)
+
+O fundo da home (`index.html`) alterna entre **três cenas em SVG**, com transição suave por fade a cada 6 segundos: (1) Amazônia & conexões — o hub; (2) petróleo & gás / tecnologia KERUI; (3) posicionamento estratégico — gerar negócios. Cada cena é um `<div class="hero__slide">`; a primeira tem a classe `is-active`.
+
+O carrossel **pausa quando o mouse está sobre o hero** e respeita a preferência de sistema "reduzir animações" (nesse caso mostra apenas a primeira cena, sem troca). Toda a arte é vetorial e local — nenhuma imagem externa, coerente com a CSP.
+
+Para trocar por fotos reais no futuro, substitua o conteúdo de cada `.hero__slide` por um `<img>` (ou mantenha o SVG). O degradê de leitura (`.hero__bg::after`) já garante o contraste do texto sobre qualquer fundo.
+
+## Botões flutuantes (WhatsApp + SAC/FAQ)
+
+Todas as páginas trazem, no canto inferior direito, dois botões fixos (`<div class="fab">`):
+
+- **WhatsApp** (verde) — abre uma conversa em `wa.me`. **Número provisório** — ver "Pendências de conteúdo".
+- **SAC / FAQ** (petróleo) — abre um e-mail para o SAC.
+
+Os rótulos são bilíngues via `data-i18n-aria` e `data-i18n-title` (chaves `fab.whatsapp` e `fab.sac`).
+
 ## Mapa de atuação
 
 O mapa da seção **Presença** (`empresa.html#presenca`) é um SVG desenhado à mão, sem biblioteca nem imagem externa. As formas usam **longitude e latitude reais**: o grupo tem `transform="scale(1,-1)"` porque no SVG o eixo Y cresce para baixo enquanto a latitude cresce para cima. Na prática, você escreve as coordenadas na ordem natural `longitude,latitude`.
@@ -122,6 +139,8 @@ Essa separação é intencional: ela preserva a força comercial do argumento ("
 Os itens abaixo são provisórios e precisam ser confirmados antes da publicação:
 
 - **Telefone:** `+55 (92) XXXX-XXXX` — a definir. A própria apresentação da Eco Mirai trazia o número zerado.
+- **Número do WhatsApp (botão flutuante):** o botão verde de WhatsApp presente em todas as páginas aponta para `https://wa.me/5592000000000`, um número **provisório**. Substitua pelo número real (formato `55` + DDD + número, só dígitos) em cada arquivo `.html` — está marcado com um comentário `ATENCAO` logo acima da tag `<div class="fab">`.
+- **E-mail do SAC:** o botão SAC/FAQ abre um e-mail para `sac@ecomirai.com.br` — endereço sugerido; confirmar com o provedor de e-mail.
 - **E-mails departamentais:** `diretoria@`, `institucional@`, `juridico@`, `administrativo@` e `comercial@ecomirai.com.br` — sugeridos a partir das prioridades informadas; confirmar com o provedor de e-mail.
 - **E-mail geral:** `contato@ecomirai.com.br` — informado como exemplo.
 - **Endereço:** consta apenas "Manaus — Amazonas, Brasil". A apresentação oficial trazia "Rua Lorem Ipsum, nº 123" (texto de espaço reservado), então o endereço completo ainda precisa ser fornecido.

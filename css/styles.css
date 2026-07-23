@@ -124,7 +124,8 @@ p:last-child{margin-bottom:0}
 }
 .nav__cta:hover{background:var(--teal-500);color:#fff}
 
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;cursor:pointer;margin-left:auto}
+/* 44x44: alvo de toque confortavel (as 3 linhas ficam centradas) */
+.burger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:0;padding:0;cursor:pointer;margin-left:auto}
 .burger span{display:block;width:24px;height:2px;background:var(--navy-800);transition:transform .25s,opacity .2s}
 .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
@@ -166,11 +167,22 @@ p:last-child{margin-bottom:0}
 }
 .hero__actions{display:flex;gap:14px;flex-wrap:wrap}
 
-.hero__stats{position:relative;border-top:1px solid rgba(255,255,255,.13);background:rgba(7,26,44,.55)}
-.hero__stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.09)}
-.stat{background:rgba(7,26,44,.6);padding:28px 26px;display:flex;flex-direction:column;gap:8px}
-.stat__value{font-size:26px;font-weight:700;letter-spacing:-.01em;color:var(--gold-500)}
-.stat__label{font-size:13px;line-height:1.5;color:#a9bccb}
+/* ---------- Indicadores: base do MESMO hero (sem caixa separada) ----------
+   Fundo transparente: eles repousam sobre a zona escura do hero (ver o
+   escurecimento vertical em .hero__bg::after), formando uma peca unica com
+   o titulo. So um filete sutil separa dos botoes acima. */
+.hero__stats{position:relative;z-index:2;margin-top:46px}
+.hero__stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+/* Sem caixa nem fundo: so divisorias verticais finas entre as colunas.
+   O texto assenta direto na zona escura do hero (ver .hero__bg::after). */
+.stat{
+  background:transparent;padding:4px 30px;
+  display:flex;flex-direction:column;gap:9px;
+  border-left:1px solid rgba(255,255,255,.11);
+}
+.stat:first-child{border-left:0;padding-left:0}
+.stat__value{font-size:31px;font-weight:700;letter-spacing:-.015em;color:var(--gold-500);line-height:1}
+.stat__label{font-size:13.5px;line-height:1.5;color:#c3d2dd}
 
 /* ---------- Sections ---------- */
 .section{padding:96px 0}
@@ -261,24 +273,6 @@ p:last-child{margin-bottom:0}
 .area h3{font-size:18px;color:var(--navy-800);margin-bottom:12px;line-height:1.35}
 .area p{font-size:14.5px;color:var(--ink-soft);line-height:1.7}
 
-/* ---------- Soluções ---------- */
-.sol-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.1);
-}
-.sol-grid li{
-  background:var(--navy-800);padding:24px 26px;
-  font-size:15px;color:#cfdbe4;display:flex;align-items:flex-start;gap:12px;
-  transition:background .25s,color .25s;
-}
-.sol-grid li::before{
-  content:"";flex-shrink:0;width:7px;height:7px;margin-top:9px;
-  background:var(--teal-300);transform:rotate(45deg);transition:background .25s;
-}
-.sol-grid li:hover{background:var(--navy-700);color:#fff}
-.sol-grid li:hover::before{background:var(--gold-500)}
-
 /* ---------- Galeria ---------- */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .shot{margin:0}
@@ -338,7 +332,6 @@ body.is-locked{overflow:hidden}
 .kerui{display:grid;grid-template-columns:1.35fr 1fr;gap:60px;align-items:start}
 .kerui__text p{color:var(--ink-soft)}
 .kerui__text .sec-head__title{margin-bottom:20px}
-.kerui__sub{font-weight:600;color:var(--navy-700)!important;margin-bottom:16px}
 
 .checklist{display:grid;gap:12px}
 .checklist li{
@@ -480,8 +473,11 @@ body.is-locked{overflow:hidden}
 @media (max-width:1024px){
   .about,.kerui,.twocol,.contact,.presence{grid-template-columns:1fr;gap:40px}
   .presence__map{max-width:440px;margin:0 auto}
-  .values,.areas,.sol-grid,.gallery{grid-template-columns:repeat(2,1fr)}
-  .hero__stats-grid{grid-template-columns:repeat(2,1fr)}
+  .values,.areas,.gallery{grid-template-columns:repeat(2,1fr)}
+  .hero__stats-grid{grid-template-columns:repeat(2,1fr);gap:26px 0}
+  /* Em 2 colunas, a divisoria vertical so entre as colunas (itens pares);
+     os impares (inicio de linha) ficam rentes a esquerda, como o 1o. */
+  .hero__stats .stat:nth-child(odd){border-left:0;padding-left:0}
   .section{padding:76px 0}
 }
 
@@ -525,7 +521,10 @@ body.is-locked{overflow:hidden}
 @media (max-width:640px){
   .container{padding:0 20px}
   .hero__inner{padding:78px 20px 68px}
-  .values,.areas,.sol-grid,.vm,.hero__stats-grid,.gallery{grid-template-columns:1fr}
+  .values,.areas,.vm,.hero__stats-grid,.gallery{grid-template-columns:1fr}
+  /* Empilhado: as divisorias verticais nao fazem sentido; troca por respiro */
+  .hero__stats-grid{gap:24px 0}
+  .stat{border-left:0;padding-left:0}
   /* No celular as setas ficam sobrepostas às bordas, para a imagem
      aproveitar toda a largura — senão a ampliação fica menor que a miniatura. */
   .lightbox{padding:16px;gap:0}
@@ -793,21 +792,21 @@ body.is-locked{overflow:hidden}
    do gradiente de fundo. Agora ele abre para o petroleo a direita. */
 .hero__bg::after{
   background:
+    /* Escurecimento vertical: a arte do carrossel se dissolve no escuro na
+       base, formando a zona onde os indicadores repousam. Transicao suave =
+       sem emenda entre "imagem" e "numeros". */
+    linear-gradient(to bottom,
+      transparent 40%,
+      rgba(6,17,28,.55) 62%,
+      rgba(6,17,28,.9) 82%,
+      rgba(6,17,28,.97) 100%),
+    /* Diagonal: mantem o texto legivel a esquerda e o petroleo a direita. */
     linear-gradient(100deg,
       rgba(7,26,44,.92) 0%,
       rgba(9,45,62,.80) 42%,
       rgba(9,64,60,.62) 78%,
       rgba(12,92,84,.50) 100%);
 }
-
-/* Faixa de indicadores em petroleo, e nao em preto-azulado */
-.hero__stats{
-  background:linear-gradient(90deg,rgba(7,26,44,.72) 0%,rgba(9,58,56,.72) 100%);
-  border-top-color:rgba(127,212,200,.28);
-}
-.hero__stats-grid{background:rgba(127,212,200,.18)}
-.stat{background:transparent}
-.stat__value{color:var(--gold-500)}
 
 /* ---------- Secoes claras ganham um fundo levemente petroleo ---------- */
 .section--alt{background:var(--teal-050)}
@@ -909,3 +908,44 @@ body.is-locked{overflow:hidden}
 .case--latam .case__place{color:var(--teal-500)}
 /* Dentro de secao ja tingida, o cartao precisa voltar ao branco para destacar */
 .section--alt .case{background:#fff}
+
+/* ==========================================================================
+   Hero: carrossel de fundos (3 cenas com fade)
+   ========================================================================== */
+.hero__slide{position:absolute;inset:0;z-index:0;opacity:0;transition:opacity 1.2s var(--ease)}
+.hero__slide.is-active{opacity:1}
+/* O degrade de leitura precisa ficar acima dos slides e abaixo do texto */
+.hero__bg::after{z-index:1}
+.hero__inner{z-index:2}
+@media (prefers-reduced-motion:reduce){
+  /* Sem animacao: mostra apenas a primeira cena, sem transicao */
+  .hero__slide{transition:none}
+}
+
+/* ==========================================================================
+   Botoes flutuantes (WhatsApp + SAC/FAQ)
+   ========================================================================== */
+.fab{
+  position:fixed;right:20px;bottom:20px;z-index:300;
+  display:flex;flex-direction:column;gap:12px;
+}
+.fab__btn{
+  width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px rgba(7,26,44,.28);
+  transition:transform .2s var(--ease),box-shadow .2s;
+}
+.fab__btn:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(7,26,44,.38)}
+.fab__btn:focus-visible{outline:3px solid var(--teal-300);outline-offset:3px}
+.fab__btn svg{width:30px;height:30px;display:block}
+/* SAC em cima, WhatsApp embaixo (mais perto do polegar) */
+.fab__btn--sac{background:var(--navy-800);color:#fff}
+.fab__btn--sac:hover{background:var(--teal-500)}
+.fab__btn--wa{background:#25d366;color:#fff}
+.fab__btn--wa:hover{background:#1ebe5a}
+
+@media (max-width:640px){
+  .fab{right:14px;bottom:14px;gap:10px}
+  .fab__btn{width:50px;height:50px}
+  .fab__btn svg{width:26px;height:26px}
+}
