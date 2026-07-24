@@ -447,7 +447,7 @@ window.ECOMIRAI_I18N = {
     "contact.i4": "Telefone",
     "contact.i5": "Atendimento",
     "contact.i5v": "Brasil e América Latina",
-    "contact.note": "Telefone, endereço completo e e-mails institucionais em processo de definição final.",
+    "contact.note": "Telefone provisório até a liberação da nova linha. Endereço completo e e-mails institucionais em processo de definição final.",
 
     /* ---- rodape ---- */
     "footer.slogan": "\"Conectando a força industrial da China às oportunidades estratégicas do Brasil.\"",
@@ -902,7 +902,7 @@ window.ECOMIRAI_I18N = {
     "contact.i4": "Phone",
     "contact.i5": "Coverage",
     "contact.i5v": "Brazil and Latin America",
-    "contact.note": "Phone number, full address and institutional e-mail addresses are being finalised.",
+    "contact.note": "Provisional phone number until the new line is activated. Full address and institutional e-mail addresses are being finalised.",
 
     /* ---- footer ---- */
     "footer.slogan": "\"Connecting China's industrial strength to Brazil's strategic opportunities.\"",

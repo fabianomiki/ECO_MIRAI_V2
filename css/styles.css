@@ -949,3 +949,16 @@ body.is-locked{overflow:hidden}
   .fab__btn{width:50px;height:50px}
   .fab__btn svg{width:26px;height:26px}
 }
+
+/* ---------- Telefone clicavel (tel:) ---------- */
+/* Rodape: abaixo do slogan, em todas as paginas */
+.footer__tel{
+  display:inline-block;margin-top:12px;
+  font-size:15px;font-weight:600;color:#fff;
+  border-bottom:1px solid rgba(127,212,200,.45);
+  transition:color .2s,border-color .2s;
+}
+.footer__tel:hover{color:var(--teal-300);border-color:var(--teal-300)}
+/* Pagina de contato: dentro da ficha corporativa */
+.tel-link{color:inherit;border-bottom:1px solid var(--line);transition:color .2s,border-color .2s}
+.tel-link:hover{color:var(--teal-500);border-color:var(--teal-500)}

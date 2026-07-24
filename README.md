@@ -138,7 +138,7 @@ Essa separação é intencional: ela preserva a força comercial do argumento ("
 
 Os itens abaixo são provisórios e precisam ser confirmados antes da publicação:
 
-- **Telefone:** `+55 (92) XXXX-XXXX` — a definir. A própria apresentação da Eco Mirai trazia o número zerado.
+- **Telefone / WhatsApp:** **(11) 93301-3000** — número **provisório**, informado pelo cliente, válido até o CEO liberar uma nova linha. Aparece em três lugares: o botão flutuante de WhatsApp (`wa.me/5511933013000`), o rodapé de todas as páginas e a ficha corporativa em `contato.html` (ambos como link `tel:`). Note que o DDD é 11 (São Paulo), enquanto a sede é em Manaus (DDD 92). **Ao trocar pela linha definitiva, atualize os três pontos** — busque por `933013000` nos arquivos `.html`.
 - **Número do WhatsApp (botão flutuante):** o botão aponta para `https://wa.me/5511933013000` — **(11) 93301-3000**, informado pelo cliente como número **temporário**. Note que o DDD é 11 (São Paulo), enquanto a sede da empresa é em Manaus (DDD 92); confirmar se este será o número definitivo de atendimento. Para trocar, edite o `href` em cada um dos cinco arquivos `.html` (formato `55` + DDD + número, só dígitos) — há um comentário logo acima da tag `<div class="fab">`.
 - **E-mail do SAC:** o botão SAC/FAQ abre um e-mail para `sac@ecomirai.com.br` — endereço sugerido; confirmar com o provedor de e-mail.
 - **E-mails departamentais:** `diretoria@`, `institucional@`, `juridico@`, `administrativo@` e `comercial@ecomirai.com.br` — sugeridos a partir das prioridades informadas; confirmar com o provedor de e-mail.
